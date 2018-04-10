@@ -1,5 +1,7 @@
 # Build Steps (nmake)
 
+protobuf version is 3.5.1
+
 ### build protobuf-lite library
 
 1. open `Native Tools Command Prompt` command, eg. x64 Native Tools Command Prompt for VS 2017.
