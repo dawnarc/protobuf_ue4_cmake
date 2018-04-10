@@ -1,10 +1,15 @@
-# Build Steps (nmake)
+# Build protoc files with cmake for Unreal Engine 4.
 
-protobuf version is 3.5.1
+Env:
+
++ protobuf version is 3.5.1
++ Navtive build command is nmake
++ cmake version is 3.10
++ Unreal Engine 4 version is 4.18
 
 ### build protobuf-lite library
 
-1. open `Native Tools Command Prompt` command, eg. x64 Native Tools Command Prompt for VS 2017.
+1. open `Native Tools Command Prompt` command, eg. `x64 Native Tools Command Prompt for VS 2017`.
 
 2.
 
@@ -30,11 +35,10 @@ protobuf source has been modified, because protobuf 3.x offical source cann't bu
 ### generate protoc files
 
 1.
+
     cd test
 
-2.
-
-    execute protoc_gen.bat
+2. execute `protoc_gen.bat`
 
 then `test.pb.h` and `test.pb.cc` would output in directory `test/`
 
@@ -62,7 +66,7 @@ then `libtest.lib` would output to directory `test/install/Release/`
 
 ### Configure UE Build.cs
 
-1. copy ue4/MyProj.Build.cs into your UE4 project: `MyProj/Source/MyProj/`
+1. copy `ue4/MyProj.Build.cs` into your UE4 project: `MyProj/Source/MyProj/`
 
 2. copy `libtest.lib` and `libprotobuf-lite.lib` into your UE4 project: `MyProj/ThirdParty/Protobuf/Library/`
 
