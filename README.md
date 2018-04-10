@@ -3,7 +3,7 @@
 Env:
 
 + protobuf version is 3.5.1
-+ Navtive build command is nmake
++ Native build command is nmake
 + cmake version is 3.10
 + Unreal Engine 4 version is 4.18
 
@@ -29,7 +29,8 @@ Env:
 
 then `libprotobuf-lite.lib` would output to directory `install/Release/`.
 
-protobuf source has been modified, because protobuf 3.x offical source cann't build whih UE4, more details: https://github.com/jashking/UE4Protobuf
+protobuf source has been modified, because protobuf 3.x offical source cann't build with UE4.
+source modify details: https://github.com/jashking/UE4Protobuf
 
 
 ### generate protoc files
@@ -64,7 +65,7 @@ then `test.pb.h` and `test.pb.cc` would output in directory `test/`
 
 then `libtest.lib` would output to directory `test/install/Release/`
 
-### Configure UE Build.cs
+### Configure UE4 Build.cs
 
 1. copy `ue4/MyProj.Build.cs` into your UE4 project: `MyProj/Source/MyProj/`
 
