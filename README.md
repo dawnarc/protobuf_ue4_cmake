@@ -77,7 +77,8 @@ then `libtest.lib` would output to directory `test/install/Release/`
 
 4. copy `test.pb.h` into your UE4 project: `MyProj/ThirdParty/Protobuf/Include/`
 
+5. Add `bEnableExceptions = true;` inside the {ProjectName}.Build.cs constructor. 
+
 then your can build your UE4 project with protoc C++ files.
 
-#### 5. Add `bEnableExceptions = true;` inside the {ProjectName}.Build.cs constructor. 
 
