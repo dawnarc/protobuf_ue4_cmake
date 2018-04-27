@@ -33,6 +33,11 @@ public class MyProj : ModuleRules
         UProjectInfo.TryGetProjectForTarget("MyProj", out CheckProjectFile);
         r = RulesCompiler.CreateProjectRulesAssembly(CheckProjectFile);
 
+        if ((Target.Platform == UnrealTargetPlatform.Win32) || (Target.Platform == UnrealTargetPlatform.Win64))
+        {
+            bEnableExceptions = true;
+        }
+        
         LoadProtobuf(Target);
     }
 
@@ -46,23 +51,12 @@ public class MyProj : ModuleRules
         {
             case UnrealTargetPlatform.Win64:
                 {
-                    switch (Target.Configuration)
-                    {
-                        case UnrealTargetConfiguration.Debug:
-                        case UnrealTargetConfiguration.DebugGame:
-                            {
-                                //UE4的Debug模式链接第三方库时，依然使用的是Release，所以这里没有使用debug版本lib
-                                PlatformString = ".lib";
-                                break;
-                            }
-                        case UnrealTargetConfiguration.Development:
-                        case UnrealTargetConfiguration.Shipping:
-                            {
-                                PlatformString = ".lib";
-                                break;
-                            }
-                    }
-
+                    PlatformString = ".lib";
+                    break;
+                }
+            case UnrealTargetPlatform.Android:
+                {
+                    PlatformString = "-ndk.a";
                     break;
                 }
         }

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(root_dir "../")  
 
 set(cpp_files
-  ${root_dir}/test.pb.cc
+  ${root_dir}/src/test.pb.cc
 )
 
 include_directories(${root_dir}/../src/)
