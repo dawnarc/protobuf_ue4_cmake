@@ -81,4 +81,14 @@ then `libtest.lib` would output to directory `test/install/Release/`
 
 then your can build your UE4 project with protoc C++ files.
 
+## Android NDK
 
+1. execute `\ndk_build\build.bat`
+
+2. execute `test\ndk_build\build.bat`
+
+3. copy `ndk_build\obj\local\armeabi-v7a\libprotobuf-lite-ndk.a` and `test\ndk_build\obj\local\armeabi-v7a\libtest-ndk.a` into your UE4 project: `MyProj/ThirdParty/Protobuf/Library/`
+
+4. copy headers in `test\src\` into your UE4 project: `MyProj/ThirdParty/Protobuf/Include/` 
+
+5. build your UE4 project.
