@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(root_dir "../")  
+set(root_dir "../") 
+
+FILE(GLOB_RECURSE generated_src ../src/*.cc)
 
 set(cpp_files
-  ${root_dir}/src/test.pb.cc
+  ${generated_src}
 )
 
 include_directories(${root_dir}/../src/)
@@ -15,6 +17,6 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../../../install/${CMAKE_BUILD_TYPE}/)
 
 add_library(libtest STATIC ${cpp_files})
 
-target_link_libraries(libtest libprotobuf-lite)  
+target_link_libraries(libtest libprotobuf)  
 
 

@@ -13,7 +13,7 @@ Env:
 
 1. open `Native Tools Command Prompt` command, eg. `x64 Native Tools Command Prompt for VS 2017`.
 
-2.
+2. Address to directory `build_protobuf-lite/` (address to directory `build_protobuf/` if you want to build `libprotobuf`):
 
     cd build_protobuf-lite
 3.
@@ -37,7 +37,7 @@ source modify details: https://github.com/jashking/UE4Protobuf
 
 ##### 2. generate protoc files
 
-1.
+1. Address to directory `test/`:
 
     cd test
 
@@ -47,9 +47,9 @@ then `test.pb.h` and `test.pb.cc` would output in directory `test/`
 
 ##### 3. build protoc C++ files
 
-1.
+1. Address to directory `test/cmake/`:
 
-    cd test/cmake
+    cd test/cmake/
     
 2.
 
