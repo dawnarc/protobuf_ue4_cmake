@@ -91,7 +91,7 @@ then your can build your UE4 project with protoc C++ files.
 
 3. copy `ndk_build\obj\local\armeabi-v7a\libprotobuf-lite-ndk.a` and `test\ndk_build\obj\local\armeabi-v7a\libtest-ndk.a` into your UE4 project: `MyProj/ThirdParty/Protobuf/Library/`
 
-4. copy headers in `test\src\` into your UE4 project: `MyProj/ThirdParty/Protobuf/Include/` 
+4. copy headers which are in `test\src\` into your UE4 project: `MyProj/ThirdParty/Protobuf/Include/` 
 
 5. build your UE4 project.
 
