@@ -6,32 +6,26 @@ using Tools.DotNETCommon;
 
 public class MyProj : ModuleRules
 {
-    RulesAssembly r;
+    private string ProjectRoot
+	{
+		get { return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../")); }
+	}
 
-    private string ModulePath
-    {
-        get { return Path.GetDirectoryName(r.GetModuleFileName(this.GetType().Name).CanonicalName); }
-    }
+	private string ThirdPartyPath
+	{
+		get { return Path.GetFullPath(Path.Combine(ModuleDirectory, ProjectRoot, "ThirdParty")); }
+	}
 
-    private string ThirdPartyPath
-    {
-        get { return Path.GetFullPath(Path.Combine(ModulePath, "../../ThirdParty/")); }
-    }
-
-    private string ProtocBuildPath
-    {
-        get { return Path.GetFullPath(Path.Combine(ModulePath, "../../ThirdParty/Protobuf/Include/")); }
-    }
+	private string ProtocBuildPath
+	{
+		get { return Path.GetFullPath(Path.Combine(ThirdPartyPath, "Protobuf/Include/")); }
+	}
 
     public MyProj(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore"});
-
-        FileReference CheckProjectFile;
-        UProjectInfo.TryGetProjectForTarget("MyProj", out CheckProjectFile);
-        r = RulesCompiler.CreateProjectRulesAssembly(CheckProjectFile);
 
         if ((Target.Platform == UnrealTargetPlatform.Win32) || (Target.Platform == UnrealTargetPlatform.Win64))
         {
