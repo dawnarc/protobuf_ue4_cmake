@@ -11,23 +11,27 @@ Env:
 
 ##### 1. build protobuf-lite library
 
-1. open `Native Tools Command Prompt` command, eg. `x64 Native Tools Command Prompt for VS 2017`.
+1. open `Native Tools Command Prompt` command, e.g. `x64 Native Tools Command Prompt for VS 2017`.
 
-2. Address to directory `build_protobuf-lite/` (address to directory `build_protobuf/` if you want to build `libprotobuf`):
+2. Address to directory `build_protobuf-lite/` (address to directory `build_protobuf/` if you want to build `libprotobuf`).
 
 		cd build_protobuf-lite
-3.
+		
+3. Create directory `build` and navigate in it.
 
-    mkdir build & cd build
-4.
+		mkdir build & cd build
+		
+4. Create directory `release` and navigate in it.
 
-    mkdir release & cd release
-5.
+		mkdir release & cd release
+	
+5. Generate configuration using `CMakeList.txt`.
 
-    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../..
-6.
+		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../..
+		
+6. Build `libprotobuf`.
 
-    nmake
+		nmake
 
 then `libprotobuf-lite.lib` would output to directory `install/Release/`.
 
@@ -41,9 +45,9 @@ source modify details: https://github.com/jashking/UE4Protobuf
 
 		cd test
 
-2. execute `protoc_gen.bat`
+2. execute `protoc_gen.bat`.
 
-then `test.pb.h` and `test.pb.cc` would output in directory `test/`
+then `test.pb.h` and `test.pb.cc` would be outputed in directory `test/`
 
 ##### 3. build protoc C++ files
 
@@ -51,19 +55,21 @@ then `test.pb.h` and `test.pb.cc` would output in directory `test/`
 
 		cd test/cmake/
     
-2.
+2. Create directory `build` and navigate in it.
 
-    mkdir build & cd build
-3.
+		mkdir build & cd build
+	
+3. Create directory `release` and navigate in it.
 
-    mkdir release & cd release
-4.
+		mkdir release & cd release
+	
+4. Generate configuration using `CMakeList.txt`.
 
-    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../..
+		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../..
     
-5.
+5. Build your own library.
 
-    nmake
+		nmake
 
 then `libtest.lib` would output to directory `test/install/Release/`
 
