@@ -15,7 +15,7 @@ Env:
 
 2. Address to directory `build_protobuf-lite/` (address to directory `build_protobuf/` if you want to build `libprotobuf`):
 
-    cd build_protobuf-lite
+		cd build_protobuf-lite
 3.
 
     mkdir build & cd build
@@ -39,7 +39,7 @@ source modify details: https://github.com/jashking/UE4Protobuf
 
 1. Address to directory `test/`:
 
-    cd test
+		cd test
 
 2. execute `protoc_gen.bat`
 
@@ -49,7 +49,7 @@ then `test.pb.h` and `test.pb.cc` would output in directory `test/`
 
 1. Address to directory `test/cmake/`:
 
-    cd test/cmake/
+		cd test/cmake/
     
 2.
 
@@ -97,7 +97,7 @@ then your can build your UE4 project with protoc C++ files.
 
 ### Reference
 
-##### Offical CMakeList.txt (cpp fiels & included heads)
+##### Offical CMakeList.txt (cpp files & included heads)
 
 libprotobuf-lite:  
 https://github.com/protocolbuffers/protobuf/blob/master/cmake/libprotobuf-lite.cmake
