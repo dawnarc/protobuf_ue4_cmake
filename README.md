@@ -9,7 +9,7 @@ Env:
 
 ### Windows
 
-##### 1. build protobuf-lite library
+##### 1. build protobuf-lite library ( or run build-windows.bat)
 
 1. open `Native Tools Command Prompt` command, e.g. `x64 Native Tools Command Prompt for VS 2017`.
 
@@ -49,7 +49,7 @@ source modify details: https://github.com/jashking/UE4Protobuf
 
 then `test.pb.h` and `test.pb.cc` would be outputed in directory `test/`
 
-##### 3. build protoc C++ files
+##### 3. build protoc C++ files ( or run test/build-windows.bat)
 
 1. Address to directory `test/cmake/`:
 
