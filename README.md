@@ -95,7 +95,7 @@ then your can build your UE4 project with protoc C++ files.
 
 ##### Attention
 
-If want to build other version, modify parameter `PROTOBUF_VERSION` to specified version (e.g. `-DPROTOBUF_VERSION=3.5.1`), And also modify version in `extract_includes.bat`.
+If want to build other version, modify parameter `PROTOBUF_VERSION` to specified version (e.g. `-DPROTOBUF_VERSION=3.5.1`), and also modify version in `extract_includes.bat`, and replace `protoc.exe` with matched version (`3.12.2` in current repository).
 
 ### Android NDK
 
