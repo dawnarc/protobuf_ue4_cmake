@@ -2,10 +2,12 @@
 
 Env:
 
-+ protobuf version is 3.5.1
++ protobuf version is 3.12.2
 + Native build command is nmake
 + cmake version is 3.10
 + Unreal Engine 4 version is 4.18
+
+
 
 ### Windows
 
@@ -27,7 +29,7 @@ Env:
 	
 5. Generate configuration using `CMakeList.txt`.
 
-		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../..
+		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DPROTOBUF_VERSION=3.12.2 ../..
 		
 6. Build `libprotobuf`.
 
@@ -65,7 +67,7 @@ then `test.pb.h` and `test.pb.cc` would be outputed in directory `test/`
 	
 4. Generate configuration using `CMakeList.txt`.
 
-		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../..
+		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DPROTOBUF_VERSION=3.12.2 ../..
     
 5. Build your own library.
 
@@ -73,7 +75,11 @@ then `test.pb.h` and `test.pb.cc` would be outputed in directory `test/`
 
 then `libtest.lib` would output to directory `test/install/Release/`
 
-##### 4. Configure UE4 Build.cs
+##### 4. Extract includes 
+
+Execute `extract_includes.bat`, then protobuf headers would be saved in directory `include`.
+
+##### 5. Configure UE4 Build.cs
 
 1. copy `ue4/MyProj.Build.cs` into your UE4 project: `MyProj/Source/MyProj/`
 
@@ -86,6 +92,10 @@ then `libtest.lib` would output to directory `test/install/Release/`
 5. Add `bEnableExceptions = true;` inside the {ProjectName}.Build.cs constructor. 
 
 then your can build your UE4 project with protoc C++ files.
+
+##### Attention
+
+If want to build other version, modify parameter `PROTOBUF_VERSION` to specified version (e.g. `-DPROTOBUF_VERSION=3.5.1`), And also modify version in `extract_includes.bat`.
 
 ### Android NDK
 

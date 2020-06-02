@@ -41,19 +41,15 @@ public class MyProj : ModuleRules
 
         //Library path
         string PlatformString = null;
-        switch (Target.Platform)
-        {
-            case UnrealTargetPlatform.Win64:
-                {
-                    PlatformString = ".lib";
-                    break;
-                }
-            case UnrealTargetPlatform.Android:
-                {
-                    PlatformString = "-ndk.a";
-                    break;
-                }
-        }
+		
+        if (Target.Platform == UnrealTargetPlatform.Win64)
+		{
+			PlatformString = ".lib";
+		}
+		else if (Target.Platform == UnrealTargetPlatform.Android)
+		{
+			PlatformString = "-ndk.a";
+		}
 
         if (null != PlatformString)
         {
