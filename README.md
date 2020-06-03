@@ -120,3 +120,8 @@ https://github.com/protocolbuffers/protobuf/blob/master/cmake/libprotobuf-lite.c
 
 libprotobuf:  
 https://github.com/protocolbuffers/protobuf/blob/master/cmake/libprotobuf.cmake
+
+##### Source
+
+Build Protobuf for Unreal Engine 4 with Jenkins Pipeline.  
+https://github.com/kingsoftgames/protobuf-ue4
