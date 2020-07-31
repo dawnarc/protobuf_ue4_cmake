@@ -48,10 +48,6 @@
 #include <google/protobuf/stubs/port.h>
 #include <google/protobuf/repeated_field.h>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4146)
-#endif //_MSC_VER
-
 // Do UTF-8 validation on string type in Debug build only
 #ifndef NDEBUG
 #define GOOGLE_PROTOBUF_UTF8_VALIDATION_ENABLED
@@ -87,7 +83,7 @@ class StringPieceField;
 // reflection.
 //
 // This class is really a namespace that contains only static methods.
-class PROTOBUF_API WireFormatLite {
+class LIBPROTOBUF_EXPORT WireFormatLite {
  public:
 
   // -----------------------------------------------------------------
@@ -741,7 +737,7 @@ class PROTOBUF_API WireFormatLite {
 // discards them.  WireFormat defines a subclass which writes to an
 // UnknownFieldSet.  This class is used by ExtensionSet::ParseField(), since
 // ExtensionSet is part of the lite library but UnknownFieldSet is not.
-class PROTOBUF_API FieldSkipper {
+class LIBPROTOBUF_EXPORT FieldSkipper {
  public:
   FieldSkipper() {}
   virtual ~FieldSkipper() {}
@@ -761,7 +757,7 @@ class PROTOBUF_API FieldSkipper {
 
 // Subclass of FieldSkipper which saves skipped fields to a CodedOutputStream.
 
-class PROTOBUF_API CodedOutputStreamFieldSkipper : public FieldSkipper {
+class LIBPROTOBUF_EXPORT CodedOutputStreamFieldSkipper : public FieldSkipper {
  public:
   explicit CodedOutputStreamFieldSkipper(io::CodedOutputStream* unknown_fields)
       : unknown_fields_(unknown_fields) {}

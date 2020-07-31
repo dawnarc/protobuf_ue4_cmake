@@ -105,7 +105,7 @@ class FieldContext;  // declared below MessageDifferencer
 // guard it with a lock to use the same MessageDifferencer instance from
 // multiple threads. Note that it's fine to call static comparison methods
 // (like MessageDifferencer::Equals) concurrently.
-class PROTOBUF_API MessageDifferencer {
+class LIBPROTOBUF_EXPORT MessageDifferencer {
  public:
   // Determines whether the supplied messages are equal. Equality is defined as
   // all fields within the two messages being set to the same value. Primitive
@@ -213,7 +213,7 @@ class PROTOBUF_API MessageDifferencer {
   // FieldDescriptors. The first will be the field of the embedded message
   // itself and the second will be the actual field in the embedded message
   // that was added/deleted/modified.
-  class PROTOBUF_API Reporter {
+  class LIBPROTOBUF_EXPORT Reporter {
    public:
     Reporter();
     virtual ~Reporter();
@@ -291,7 +291,7 @@ class PROTOBUF_API MessageDifferencer {
 
   // MapKeyComparator is used to determine if two elements have the same key
   // when comparing elements of a repeated field as a map.
-  class PROTOBUF_API MapKeyComparator {
+  class LIBPROTOBUF_EXPORT MapKeyComparator {
    public:
     MapKeyComparator();
     virtual ~MapKeyComparator();
@@ -314,7 +314,7 @@ class PROTOBUF_API MessageDifferencer {
   // field IsIgnored is called on each added IgnoreCriteria until one returns
   // true or all return false.
   // IsIgnored is called for fields where at least one side has a value.
-  class PROTOBUF_API IgnoreCriteria {
+  class LIBPROTOBUF_EXPORT IgnoreCriteria {
    public:
     IgnoreCriteria();
     virtual ~IgnoreCriteria();
@@ -585,7 +585,7 @@ class PROTOBUF_API MessageDifferencer {
   // complete until after you destroy the reporter. For example, if you use a
   // StreamReporter to write to a StringOutputStream, the target string may
   // contain uninitialized data until the reporter is destroyed.
-  class PROTOBUF_API StreamReporter : public Reporter {
+  class LIBPROTOBUF_EXPORT StreamReporter : public Reporter {
    public:
     explicit StreamReporter(io::ZeroCopyOutputStream* output);
     explicit StreamReporter(io::Printer* printer);  // delimiter '$'
@@ -667,7 +667,7 @@ class PROTOBUF_API MessageDifferencer {
   class MultipleFieldsMapKeyComparator;
 
   // A MapKeyComparator for use with map_entries.
-  class PROTOBUF_API MapEntryKeyComparator : public MapKeyComparator {
+  class LIBPROTOBUF_EXPORT MapEntryKeyComparator : public MapKeyComparator {
    public:
     explicit MapEntryKeyComparator(MessageDifferencer* message_differencer);
     virtual bool IsMatch(const Message& message1, const Message& message2,
@@ -858,7 +858,7 @@ class PROTOBUF_API MessageDifferencer {
 
 // This class provides extra information to the FieldComparator::Compare
 // function.
-class PROTOBUF_API FieldContext {
+class LIBPROTOBUF_EXPORT FieldContext {
  public:
   explicit FieldContext(
       std::vector<MessageDifferencer::SpecificField>* parent_fields)

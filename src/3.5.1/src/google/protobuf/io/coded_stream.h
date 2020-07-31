@@ -136,10 +136,6 @@
 #include <google/protobuf/stubs/port.h>
 #include <google/protobuf/stubs/port.h>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4800)
-#endif //_MSC_VER
-
 namespace google {
 
 namespace protobuf {
@@ -166,7 +162,7 @@ class ZeroCopyOutputStream;          // zero_copy_stream.h
 // Most methods of CodedInputStream that return a bool return false if an
 // underlying I/O error occurs or if the data is malformed.  Once such a
 // failure occurs, the CodedInputStream is broken and is no longer useful.
-class PROTOBUF_API CodedInputStream {
+class LIBPROTOBUF_EXPORT CodedInputStream {
  public:
   // Create a CodedInputStream that reads from the given ZeroCopyInputStream.
   explicit CodedInputStream(ZeroCopyInputStream* input);
@@ -693,7 +689,7 @@ class PROTOBUF_API CodedInputStream {
 //   }
 //
 //   delete coded_output;
-class PROTOBUF_API CodedOutputStream {
+class LIBPROTOBUF_EXPORT CodedOutputStream {
  public:
   // Create an CodedOutputStream that writes to the given ZeroCopyOutputStream.
   explicit CodedOutputStream(ZeroCopyOutputStream* output);

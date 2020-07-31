@@ -407,7 +407,7 @@ struct TypeImplementsMergeBehavior< ::std::string> {
 //     // Only needs to be implemented if SpaceUsedExcludingSelf() is called.
 //     static int SpaceUsedLong(const Type&);
 //   };
-class PROTOBUF_API RepeatedPtrFieldBase {
+class LIBPROTOBUF_EXPORT RepeatedPtrFieldBase {
  protected:
   // The reflection implementation needs to call protected methods directly,
   // reinterpreting pointers as being to Message instead of a specific Message

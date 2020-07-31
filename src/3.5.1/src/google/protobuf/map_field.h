@@ -44,9 +44,6 @@
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/unknown_field_set.h>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4661)
-#endif //_MSC_VER
 
 namespace google {
 namespace protobuf {
@@ -61,7 +58,7 @@ class MapFieldAccessor;
 // This class provides access to map field using reflection, which is the same
 // as those provided for RepeatedPtrField<Message>. It is used for internal
 // reflection implentation only. Users should never use this directly.
-class PROTOBUF_API MapFieldBase {
+class LIBPROTOBUF_EXPORT MapFieldBase {
  public:
   MapFieldBase()
       : arena_(NULL),
@@ -309,7 +306,7 @@ struct MapEntryToMapField<MapEntry<T, Key, Value, kKeyFieldType,
       MapFieldType;
 };
 
-class PROTOBUF_API DynamicMapField: public TypeDefinedMapFieldBase<MapKey, MapValueRef> {
+class LIBPROTOBUF_EXPORT DynamicMapField: public TypeDefinedMapFieldBase<MapKey, MapValueRef> {
  public:
   explicit DynamicMapField(const Message* default_entry);
   DynamicMapField(const Message* default_entry, Arena* arena);
@@ -352,7 +349,7 @@ class PROTOBUF_API DynamicMapField: public TypeDefinedMapFieldBase<MapKey, MapVa
 
 // MapKey is an union type for representing any possible
 // map key.
-class PROTOBUF_API MapKey {
+class LIBPROTOBUF_EXPORT MapKey {
  public:
   MapKey() : type_(0) {
   }
@@ -556,7 +553,7 @@ class PROTOBUF_API MapKey {
 };
 
 // MapValueRef points to a map value.
-class PROTOBUF_API MapValueRef {
+class LIBPROTOBUF_EXPORT MapValueRef {
  public:
   MapValueRef() : data_(NULL), type_(0) {}
 
@@ -727,7 +724,7 @@ class PROTOBUF_API MapValueRef {
 
 #undef TYPE_CHECK
 
-class PROTOBUF_API MapIterator {
+class LIBPROTOBUF_EXPORT MapIterator {
  public:
   MapIterator(Message* message, const FieldDescriptor* field) {
     const Reflection* reflection = message->GetReflection();

@@ -45,7 +45,7 @@ namespace internal {
 // A Mutex is a non-reentrant (aka non-recursive) mutex.  At most one thread T
 // may hold a mutex at a given time.  If T attempts to Lock() the same Mutex
 // while holding it, T will deadlock.
-class PROTOBUF_API Mutex {
+class LIBPROTOBUF_EXPORT Mutex {
  public:
   // Create a Mutex that is not held by anybody.
   Mutex();
@@ -71,7 +71,7 @@ class PROTOBUF_API Mutex {
 };
 
 // MutexLock(mu) acquires mu when constructed and releases it when destroyed.
-class PROTOBUF_API MutexLock {
+class LIBPROTOBUF_EXPORT MutexLock {
  public:
   explicit MutexLock(Mutex *mu) : mu_(mu) { this->mu_->Lock(); }
   ~MutexLock() { this->mu_->Unlock(); }
@@ -85,7 +85,7 @@ typedef MutexLock ReaderMutexLock;
 typedef MutexLock WriterMutexLock;
 
 // MutexLockMaybe is like MutexLock, but is a no-op when mu is NULL.
-class PROTOBUF_API MutexLockMaybe {
+class LIBPROTOBUF_EXPORT MutexLockMaybe {
  public:
   explicit MutexLockMaybe(Mutex *mu) :
     mu_(mu) { if (this->mu_ != NULL) { this->mu_->Lock(); } }

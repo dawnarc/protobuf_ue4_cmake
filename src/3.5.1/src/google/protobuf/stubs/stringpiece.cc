@@ -35,10 +35,6 @@
 #include <string>
 #include <ostream>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4018)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 std::ostream& operator<<(std::ostream& o, StringPiece piece) {

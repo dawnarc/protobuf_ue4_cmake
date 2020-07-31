@@ -183,7 +183,7 @@ struct Metadata {
 // optimized for speed will want to override these with faster implementations,
 // but classes optimized for code size may be happy with keeping them.  See
 // the optimize_for option in descriptor.proto.
-class PROTOBUF_API Message : public MessageLite {
+class LIBPROTOBUF_EXPORT Message : public MessageLite {
  public:
   inline Message() {}
   virtual ~Message() {}
@@ -409,7 +409,7 @@ class MutableRepeatedFieldRef;
 //
 // TODO(kenton):  Create a utility class which callers can use to read and
 //   write fields from a Reflection without paying attention to the type.
-class PROTOBUF_API Reflection {
+class LIBPROTOBUF_EXPORT Reflection {
  public:
   inline Reflection() {}
   virtual ~Reflection();
@@ -1023,7 +1023,7 @@ class PROTOBUF_API Reflection {
 };
 
 // Abstract interface for a factory for message objects.
-class PROTOBUF_API MessageFactory {
+class LIBPROTOBUF_EXPORT MessageFactory {
  public:
   inline MessageFactory() {}
   virtual ~MessageFactory();
@@ -1088,12 +1088,12 @@ class PROTOBUF_API MessageFactory {
 
 #define DECLARE_GET_REPEATED_FIELD(TYPE)                         \
 template<>                                                       \
-PROTOBUF_API                                               \
+LIBPROTOBUF_EXPORT                                               \
 const RepeatedField<TYPE>& Reflection::GetRepeatedField<TYPE>(   \
     const Message& message, const FieldDescriptor* field) const; \
                                                                  \
 template<>                                                       \
-PROTOBUF_API                                               \
+LIBPROTOBUF_EXPORT                                               \
 RepeatedField<TYPE>* Reflection::MutableRepeatedField<TYPE>(     \
     Message* message, const FieldDescriptor* field) const;
 

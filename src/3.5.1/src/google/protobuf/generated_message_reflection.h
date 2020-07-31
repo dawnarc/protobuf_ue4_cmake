@@ -257,7 +257,7 @@ struct MigrationSchema {
 //    of whatever type the individual field would be.  Strings and
 //    Messages use RepeatedPtrFields while everything else uses
 //    RepeatedFields.
-class PROTOBUF_API GeneratedMessageReflection PROTOBUF_FINAL : public Reflection {
+class LIBPROTOBUF_EXPORT GeneratedMessageReflection PROTOBUF_FINAL : public Reflection {
  public:
   // Constructs a GeneratedMessageReflection.
   // Parameters:
@@ -660,9 +660,13 @@ class PROTOBUF_API GeneratedMessageReflection PROTOBUF_FINAL : public Reflection
 // On MSVC, this should be detected automatically.
 template<typename To, typename From>
 inline To dynamic_cast_if_available(From from) {
+#if defined(GOOGLE_PROTOBUF_NO_RTTI) || (defined(_MSC_VER)&&!defined(_CPPRTTI))
   // Avoid the compiler warning about unused variables.
   (void)from;
   return NULL;
+#else
+  return dynamic_cast<To>(from);
+#endif
 }
 
 // Tries to downcast this message to a generated message type.
@@ -684,10 +688,15 @@ T* DynamicCastToGenerated(const Message* from) {
   const Message* unused = static_cast<T*>(NULL);
   (void)unused;
 
+#if defined(GOOGLE_PROTOBUF_NO_RTTI) || \
+  (defined(_MSC_VER) && !defined(_CPPRTTI))
   bool ok = &T::default_instance() ==
             from->GetReflection()->GetMessageFactory()->GetPrototype(
                 from->GetDescriptor());
   return ok ? down_cast<T*>(from) : NULL;
+#else
+  return dynamic_cast<T*>(from);
+#endif
 }
 
 template <typename T>
@@ -696,7 +705,7 @@ T* DynamicCastToGenerated(Message* from) {
   return const_cast<T*>(DynamicCastToGenerated<const T>(message_const));
 }
 
-PROTOBUF_API void AssignDescriptors(
+LIBPROTOBUF_EXPORT void AssignDescriptors(
     const string& filename, const MigrationSchema* schemas,
     const Message* const* default_instances_, const uint32* offsets,
     MessageFactory* factory,
@@ -705,10 +714,10 @@ PROTOBUF_API void AssignDescriptors(
     const EnumDescriptor** file_level_enum_descriptors,
     const ServiceDescriptor** file_level_service_descriptors);
 
-PROTOBUF_API void RegisterAllTypes(const Metadata* file_level_metadata, int size);
+LIBPROTOBUF_EXPORT void RegisterAllTypes(const Metadata* file_level_metadata, int size);
 
 // These cannot be in lite so we put them in the reflection.
-PROTOBUF_API void UnknownFieldSetSerializer(const uint8* base, uint32 offset, uint32 tag,
+LIBPROTOBUF_EXPORT void UnknownFieldSetSerializer(const uint8* base, uint32 offset, uint32 tag,
                                uint32 has_offset,
                                ::google::protobuf::io::CodedOutputStream* output);
 

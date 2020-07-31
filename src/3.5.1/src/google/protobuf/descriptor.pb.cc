@@ -19,11 +19,6 @@
 #include "third_party/protobuf/version.h"
 #endif
 // @@protoc_insertion_point(includes)
-
-#ifdef _MSC_VER
-#pragma warning(disable: 4125)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 class FileDescriptorSetDefaultTypeInternal {

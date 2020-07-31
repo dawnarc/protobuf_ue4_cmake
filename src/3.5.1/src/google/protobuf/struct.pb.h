@@ -37,7 +37,7 @@
 
 namespace protobuf_google_2fprotobuf_2fstruct_2eproto {
 // Internal implementation detail -- do not use these members.
-struct PROTOBUF_API TableStruct {
+struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[4];
@@ -45,10 +45,10 @@ struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void PROTOBUF_API AddDescriptors();
-void PROTOBUF_API InitDefaultsListValueImpl();
-void PROTOBUF_API InitDefaultsListValue();
-inline void PROTOBUF_API InitDefaults() {
+void LIBPROTOBUF_EXPORT AddDescriptors();
+void LIBPROTOBUF_EXPORT InitDefaultsListValueImpl();
+void LIBPROTOBUF_EXPORT InitDefaultsListValue();
+inline void LIBPROTOBUF_EXPORT InitDefaults() {
   InitDefaultsListValue();
 }
 }  // namespace protobuf_google_2fprotobuf_2fstruct_2eproto
@@ -56,16 +56,16 @@ namespace google {
 namespace protobuf {
 class ListValue;
 class ListValueDefaultTypeInternal;
-PROTOBUF_API extern ListValueDefaultTypeInternal _ListValue_default_instance_;
+LIBPROTOBUF_EXPORT extern ListValueDefaultTypeInternal _ListValue_default_instance_;
 class Struct;
 class StructDefaultTypeInternal;
-PROTOBUF_API extern StructDefaultTypeInternal _Struct_default_instance_;
+LIBPROTOBUF_EXPORT extern StructDefaultTypeInternal _Struct_default_instance_;
 class Struct_FieldsEntry_DoNotUse;
 class Struct_FieldsEntry_DoNotUseDefaultTypeInternal;
-PROTOBUF_API extern Struct_FieldsEntry_DoNotUseDefaultTypeInternal _Struct_FieldsEntry_DoNotUse_default_instance_;
+LIBPROTOBUF_EXPORT extern Struct_FieldsEntry_DoNotUseDefaultTypeInternal _Struct_FieldsEntry_DoNotUse_default_instance_;
 class Value;
 class ValueDefaultTypeInternal;
-PROTOBUF_API extern ValueDefaultTypeInternal _Value_default_instance_;
+LIBPROTOBUF_EXPORT extern ValueDefaultTypeInternal _Value_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -76,12 +76,12 @@ enum NullValue {
   NullValue_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   NullValue_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-PROTOBUF_API bool NullValue_IsValid(int value);
+LIBPROTOBUF_EXPORT bool NullValue_IsValid(int value);
 const NullValue NullValue_MIN = NULL_VALUE;
 const NullValue NullValue_MAX = NULL_VALUE;
 const int NullValue_ARRAYSIZE = NullValue_MAX + 1;
 
-PROTOBUF_API const ::google::protobuf::EnumDescriptor* NullValue_descriptor();
+LIBPROTOBUF_EXPORT const ::google::protobuf::EnumDescriptor* NullValue_descriptor();
 inline const ::std::string& NullValue_Name(NullValue value) {
   return ::google::protobuf::internal::NameOfEnum(
     NullValue_descriptor(), value);
@@ -114,7 +114,7 @@ public:
 
 // -------------------------------------------------------------------
 
-class PROTOBUF_API Struct : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Struct) */ {
+class LIBPROTOBUF_EXPORT Struct : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Struct) */ {
  public:
   Struct();
   virtual ~Struct();
@@ -237,7 +237,7 @@ class PROTOBUF_API Struct : public ::google::protobuf::Message /* @@protoc_inser
 };
 // -------------------------------------------------------------------
 
-class PROTOBUF_API Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Value) */ {
+class LIBPROTOBUF_EXPORT Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Value) */ {
  public:
   Value();
   virtual ~Value();
@@ -459,7 +459,7 @@ class PROTOBUF_API Value : public ::google::protobuf::Message /* @@protoc_insert
 };
 // -------------------------------------------------------------------
 
-class PROTOBUF_API ListValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.ListValue) */ {
+class LIBPROTOBUF_EXPORT ListValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.ListValue) */ {
  public:
   ListValue();
   virtual ~ListValue();

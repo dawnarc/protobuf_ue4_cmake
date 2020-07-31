@@ -66,7 +66,7 @@ namespace internal {
 // non-reflection based routines.
 //
 // This class is really a namespace that contains only static methods
-class PROTOBUF_API WireFormat {
+class LIBPROTOBUF_EXPORT WireFormat {
  public:
 
   // Given a field return its WireType
@@ -256,7 +256,7 @@ class PROTOBUF_API WireFormat {
 };
 
 // Subclass of FieldSkipper which saves skipped fields to an UnknownFieldSet.
-class PROTOBUF_API UnknownFieldSetFieldSkipper : public FieldSkipper {
+class LIBPROTOBUF_EXPORT UnknownFieldSetFieldSkipper : public FieldSkipper {
  public:
   UnknownFieldSetFieldSkipper(UnknownFieldSet* unknown_fields)
       : unknown_fields_(unknown_fields) {}

@@ -74,7 +74,7 @@ namespace strings {
 //   sink->Append(my_data.data(), my_data.size());
 //   sink->Flush();
 //
-class PROTOBUF_API ByteSink {
+class LIBPROTOBUF_EXPORT ByteSink {
  public:
   ByteSink() {}
   virtual ~ByteSink() {}
@@ -103,7 +103,7 @@ class PROTOBUF_API ByteSink {
 //     source->Skip(data.length());
 //   }
 //
-class PROTOBUF_API ByteSource {
+class LIBPROTOBUF_EXPORT ByteSource {
  public:
   ByteSource() {}
   virtual ~ByteSource() {}
@@ -159,7 +159,7 @@ class PROTOBUF_API ByteSource {
 //   sink.Append("hi", 2);    // OK
 //   sink.Append(data, 100);  // WOOPS! Overflows buf[10].
 //
-class PROTOBUF_API UncheckedArrayByteSink : public ByteSink {
+class LIBPROTOBUF_EXPORT UncheckedArrayByteSink : public ByteSink {
  public:
   explicit UncheckedArrayByteSink(char* dest) : dest_(dest) {}
   virtual void Append(const char* data, size_t n);
@@ -187,7 +187,7 @@ class PROTOBUF_API UncheckedArrayByteSink : public ByteSink {
 //   sink.Append("hi", 2);    // OK
 //   sink.Append(data, 100);  // Will only write 8 more bytes
 //
-class PROTOBUF_API CheckedArrayByteSink : public ByteSink {
+class LIBPROTOBUF_EXPORT CheckedArrayByteSink : public ByteSink {
  public:
   CheckedArrayByteSink(char* outbuf, size_t capacity);
   virtual void Append(const char* bytes, size_t n);
@@ -223,7 +223,7 @@ class PROTOBUF_API CheckedArrayByteSink : public ByteSink {
 //   const char* buf = sink.GetBuffer();  // Ownership transferred
 //   delete[] buf;
 //
-class PROTOBUF_API GrowingArrayByteSink : public strings::ByteSink {
+class LIBPROTOBUF_EXPORT GrowingArrayByteSink : public strings::ByteSink {
  public:
   explicit GrowingArrayByteSink(size_t estimated_size);
   virtual ~GrowingArrayByteSink();
@@ -253,7 +253,7 @@ class PROTOBUF_API GrowingArrayByteSink : public strings::ByteSink {
 //   sink.Append("World", 5);
 //   assert(dest == "Hello World");
 //
-class PROTOBUF_API StringByteSink : public ByteSink {
+class LIBPROTOBUF_EXPORT StringByteSink : public ByteSink {
  public:
   explicit StringByteSink(string* dest) : dest_(dest) {}
   virtual void Append(const char* data, size_t n);
@@ -270,7 +270,7 @@ class PROTOBUF_API StringByteSink : public ByteSink {
 //   NullByteSink sink;
 //   sink.Append(data, data.size());  // All data ignored.
 //
-class PROTOBUF_API NullByteSink : public ByteSink {
+class LIBPROTOBUF_EXPORT NullByteSink : public ByteSink {
  public:
   NullByteSink() {}
   virtual void Append(const char *data, size_t n) {}
@@ -292,7 +292,7 @@ class PROTOBUF_API NullByteSink : public ByteSink {
 //   assert(source.Available() == 5);
 //   assert(source.Peek() == "Hello");
 //
-class PROTOBUF_API ArrayByteSource : public ByteSource {
+class LIBPROTOBUF_EXPORT ArrayByteSource : public ByteSource {
  public:
   explicit ArrayByteSource(StringPiece s) : input_(s) {}
 
@@ -323,7 +323,7 @@ class PROTOBUF_API ArrayByteSource : public ByteSource {
 //   assert(limit.Available() == 5);
 //   assert(limit.Peek() == "Hello");
 //
-class PROTOBUF_API LimitByteSource : public ByteSource {
+class LIBPROTOBUF_EXPORT LimitByteSource : public ByteSource {
  public:
   // Returns at most "limit" bytes from "source".
   LimitByteSource(ByteSource* source, size_t limit);

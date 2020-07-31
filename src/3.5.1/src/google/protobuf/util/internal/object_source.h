@@ -48,7 +48,7 @@ class ObjectWriter;
 // example, a character stream, or protobuf.
 //
 // Derived classes could be thread-unsafe.
-class PROTOBUF_API ObjectSource {
+class LIBPROTOBUF_EXPORT ObjectSource {
  public:
   virtual ~ObjectSource() {}
 

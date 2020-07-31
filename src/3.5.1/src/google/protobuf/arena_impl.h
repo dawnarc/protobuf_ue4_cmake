@@ -60,7 +60,7 @@ inline size_t AlignUpTo8(size_t n) {
 // in turn would be templates, which will/cannot happen. However separating
 // the memory allocation part from the cruft of the API users expect we can
 // use #ifdef the select the best implementation based on hardware / OS.
-class PROTOBUF_API ArenaImpl {
+class LIBPROTOBUF_EXPORT ArenaImpl {
  public:
   struct Options {
     size_t start_block_size;
@@ -174,7 +174,7 @@ class PROTOBUF_API ArenaImpl {
   // local storage class we implemented.
   // iOS also does not support the GOOGLE_THREAD_LOCAL keyword.
   static ThreadCache& thread_cache();
-#elif defined(PROTOBUF_API)
+#elif defined(PROTOBUF_USE_DLLS)
   // Thread local variables cannot be exposed through DLL interface but we can
   // wrap them in static functions.
   static ThreadCache& thread_cache();

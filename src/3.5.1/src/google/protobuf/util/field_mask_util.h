@@ -43,7 +43,7 @@ namespace google {
 namespace protobuf {
 namespace util {
 
-class PROTOBUF_API FieldMaskUtil {
+class LIBPROTOBUF_EXPORT FieldMaskUtil {
   typedef google::protobuf::FieldMask FieldMask;
 
  public:
@@ -184,7 +184,7 @@ class PROTOBUF_API FieldMaskUtil {
 // google/protobuf/field_mask.proto, set replace_message_fields and
 // replace_repeated_fields to 'true'. The default options are not compatible
 // with google/protobuf/field_mask.proto.
-class PROTOBUF_API FieldMaskUtil::MergeOptions {
+class LIBPROTOBUF_EXPORT FieldMaskUtil::MergeOptions {
  public:
   MergeOptions()
       : replace_message_fields_(false), replace_repeated_fields_(false) {}
@@ -212,7 +212,7 @@ class PROTOBUF_API FieldMaskUtil::MergeOptions {
   bool replace_repeated_fields_;
 };
 
-class PROTOBUF_API FieldMaskUtil::TrimOptions {
+class LIBPROTOBUF_EXPORT FieldMaskUtil::TrimOptions {
  public:
   TrimOptions()
       : keep_required_fields_(false) {}

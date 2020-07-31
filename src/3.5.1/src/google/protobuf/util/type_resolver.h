@@ -53,7 +53,7 @@ namespace util {
 // Abstract interface for a type resovler.
 //
 // Implementations of this interface must be thread-safe.
-class PROTOBUF_API TypeResolver {
+class LIBPROTOBUF_EXPORT TypeResolver {
  public:
   TypeResolver() {}
   virtual ~TypeResolver() {}

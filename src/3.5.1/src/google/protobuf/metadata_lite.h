@@ -199,7 +199,7 @@ class InternalMetadataWithArenaLite
 // LiteUnknownFieldSetter setter(&_internal_metadata_);
 // StringOutputStream stream(setter.buffer());
 // guarantees that the string is only swapped after stream is destroyed.
-class PROTOBUF_API LiteUnknownFieldSetter {
+class LIBPROTOBUF_EXPORT LiteUnknownFieldSetter {
  public:
   explicit LiteUnknownFieldSetter(InternalMetadataWithArenaLite* metadata)
       : metadata_(metadata) {

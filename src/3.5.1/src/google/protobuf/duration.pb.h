@@ -33,7 +33,7 @@
 
 namespace protobuf_google_2fprotobuf_2fduration_2eproto {
 // Internal implementation detail -- do not use these members.
-struct PROTOBUF_API TableStruct {
+struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[1];
@@ -41,10 +41,10 @@ struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void PROTOBUF_API AddDescriptors();
-void PROTOBUF_API InitDefaultsDurationImpl();
-void PROTOBUF_API InitDefaultsDuration();
-inline void PROTOBUF_API InitDefaults() {
+void LIBPROTOBUF_EXPORT AddDescriptors();
+void LIBPROTOBUF_EXPORT InitDefaultsDurationImpl();
+void LIBPROTOBUF_EXPORT InitDefaultsDuration();
+inline void LIBPROTOBUF_EXPORT InitDefaults() {
   InitDefaultsDuration();
 }
 }  // namespace protobuf_google_2fprotobuf_2fduration_2eproto
@@ -52,7 +52,7 @@ namespace google {
 namespace protobuf {
 class Duration;
 class DurationDefaultTypeInternal;
-PROTOBUF_API extern DurationDefaultTypeInternal _Duration_default_instance_;
+LIBPROTOBUF_EXPORT extern DurationDefaultTypeInternal _Duration_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -60,7 +60,7 @@ namespace protobuf {
 
 // ===================================================================
 
-class PROTOBUF_API Duration : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Duration) */ {
+class LIBPROTOBUF_EXPORT Duration : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Duration) */ {
  public:
   Duration();
   virtual ~Duration();

@@ -97,10 +97,6 @@
 #include <google/protobuf/stubs/strutil.h>
 #include <google/protobuf/stubs/stl_util.h>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4310)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 namespace io {

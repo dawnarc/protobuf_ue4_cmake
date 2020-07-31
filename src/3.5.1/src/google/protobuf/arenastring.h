@@ -51,7 +51,7 @@ namespace google {
 namespace protobuf {
 namespace internal {
 
-struct PROTOBUF_API ArenaStringPtr {
+struct LIBPROTOBUF_EXPORT ArenaStringPtr {
   inline void Set(const ::std::string* default_value,
                   const ::std::string& value, ::google::protobuf::Arena* arena) {
     if (ptr_ == default_value) {

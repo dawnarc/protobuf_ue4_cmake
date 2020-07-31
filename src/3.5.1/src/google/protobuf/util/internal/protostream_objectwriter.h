@@ -72,7 +72,7 @@ class ObjectLocationTracker;
 // the ProtoWriter class to write raw proto bytes.
 //
 // It also supports streaming.
-class PROTOBUF_API ProtoStreamObjectWriter : public ProtoWriter {
+class LIBPROTOBUF_EXPORT ProtoStreamObjectWriter : public ProtoWriter {
  public:
   // Options that control ProtoStreamObjectWriter class's behavior.
   struct Options {
@@ -131,7 +131,7 @@ class PROTOBUF_API ProtoStreamObjectWriter : public ProtoWriter {
                                          const DataPiece&);
 
   // Handles writing Anys out using nested object writers and the like.
-  class PROTOBUF_API AnyWriter {
+  class LIBPROTOBUF_EXPORT AnyWriter {
    public:
     explicit AnyWriter(ProtoStreamObjectWriter* parent);
     ~AnyWriter();
@@ -156,7 +156,7 @@ class PROTOBUF_API ProtoStreamObjectWriter : public ProtoWriter {
    private:
     // Before the "@type" field is encountered, we store all incoming data
     // into this Event struct and replay them after we get the "@type" field.
-    class PROTOBUF_API Event {
+    class LIBPROTOBUF_EXPORT Event {
      public:
       enum Type {
         START_OBJECT = 0,
@@ -247,7 +247,7 @@ class PROTOBUF_API ProtoStreamObjectWriter : public ProtoWriter {
 
   // Represents an item in a stack of items used to keep state between
   // ObjectWrier events.
-  class PROTOBUF_API Item : public BaseElement {
+  class LIBPROTOBUF_EXPORT Item : public BaseElement {
    public:
     // Indicates the type of item.
     enum ItemType {

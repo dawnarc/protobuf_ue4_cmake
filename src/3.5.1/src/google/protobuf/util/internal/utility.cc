@@ -43,10 +43,6 @@
 #include <google/protobuf/stubs/map_util.h>
 #include <google/protobuf/stubs/mathlimits.h>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4018)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 namespace util {

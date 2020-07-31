@@ -60,10 +60,6 @@
 #include <google/protobuf/stubs/map_util.h>
 #include <google/protobuf/stubs/stl_util.h>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4018)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 

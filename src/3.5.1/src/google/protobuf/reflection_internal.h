@@ -35,10 +35,6 @@
 #include <google/protobuf/reflection.h>
 #include <google/protobuf/repeated_field.h>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4946)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 namespace internal {

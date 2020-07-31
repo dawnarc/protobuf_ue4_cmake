@@ -63,7 +63,7 @@ namespace io {
 // of messages.
 //
 // This class is really a namespace that contains only static methods.
-class PROTOBUF_API TextFormat {
+class LIBPROTOBUF_EXPORT TextFormat {
  public:
   // Outputs a textual representation of the given message to the given
   // output stream. Returns false if printing fails.
@@ -94,7 +94,7 @@ class PROTOBUF_API TextFormat {
                                       int index,
                                       string* output);
 
-  class PROTOBUF_API BaseTextGenerator {
+  class LIBPROTOBUF_EXPORT BaseTextGenerator {
    public:
     virtual ~BaseTextGenerator();
     // Print text to the output stream.
@@ -112,7 +112,7 @@ class PROTOBUF_API TextFormat {
   // string representation.
   // You can derive from this FastFieldValuePrinter if you want to have fields
   // to be printed in a different way and register it at the Printer.
-  class PROTOBUF_API FastFieldValuePrinter {
+  class LIBPROTOBUF_EXPORT FastFieldValuePrinter {
    public:
     FastFieldValuePrinter();
     virtual ~FastFieldValuePrinter();
@@ -144,7 +144,7 @@ class PROTOBUF_API TextFormat {
     GOOGLE_DISALLOW_EVIL_CONSTRUCTORS(FastFieldValuePrinter);
   };
 
-  class PROTOBUF_API PROTOBUF_RUNTIME_DEPRECATED("Please use FastFieldValuePrinter")
+  class LIBPROTOBUF_EXPORT PROTOBUF_RUNTIME_DEPRECATED("Please use FastFieldValuePrinter")
       FieldValuePrinter {
    public:
     FieldValuePrinter();
@@ -178,7 +178,7 @@ class PROTOBUF_API TextFormat {
 
   // Class for those users which require more fine-grained control over how
   // a protobuffer message is printed out.
-  class PROTOBUF_API Printer {
+  class LIBPROTOBUF_EXPORT Printer {
    public:
     Printer();
     ~Printer();
@@ -390,7 +390,7 @@ class PROTOBUF_API TextFormat {
   // Interface that TextFormat::Parser can use to find extensions.
   // This class may be extended in the future to find more information
   // like fields, etc.
-  class PROTOBUF_API Finder {
+  class LIBPROTOBUF_EXPORT Finder {
    public:
     virtual ~Finder();
 
@@ -413,7 +413,7 @@ class PROTOBUF_API TextFormat {
 
   // Data structure which is populated with the locations of each field
   // value parsed from the text.
-  class PROTOBUF_API ParseInfoTree {
+  class LIBPROTOBUF_EXPORT ParseInfoTree {
    public:
     ParseInfoTree();
     ~ParseInfoTree();
@@ -455,7 +455,7 @@ class PROTOBUF_API TextFormat {
   };
 
   // For more control over parsing, use this class.
-  class PROTOBUF_API Parser {
+  class LIBPROTOBUF_EXPORT Parser {
    public:
     Parser();
     ~Parser();

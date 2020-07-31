@@ -121,7 +121,7 @@ class ZeroCopyOutputStream;
 
 // Abstract interface similar to an input stream but designed to minimize
 // copying.
-class PROTOBUF_API ZeroCopyInputStream {
+class LIBPROTOBUF_EXPORT ZeroCopyInputStream {
  public:
   ZeroCopyInputStream() {}
   virtual ~ZeroCopyInputStream() {}
@@ -178,7 +178,7 @@ class PROTOBUF_API ZeroCopyInputStream {
 
 // Abstract interface similar to an output stream but designed to minimize
 // copying.
-class PROTOBUF_API ZeroCopyOutputStream {
+class LIBPROTOBUF_EXPORT ZeroCopyOutputStream {
  public:
   ZeroCopyOutputStream() {}
   virtual ~ZeroCopyOutputStream() {}

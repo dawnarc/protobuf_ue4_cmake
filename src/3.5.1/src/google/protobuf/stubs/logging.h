@@ -70,7 +70,7 @@ namespace internal {
 
 class LogFinisher;
 
-class PROTOBUF_API LogMessage {
+class LIBPROTOBUF_EXPORT LogMessage {
  public:
   LogMessage(LogLevel level, const char* filename, int line);
   ~LogMessage();
@@ -102,7 +102,7 @@ class PROTOBUF_API LogMessage {
 
 // Used to make the entire "LOG(BLAH) << etc." expression have a void return
 // type and print a newline after each message.
-class PROTOBUF_API LogFinisher {
+class LIBPROTOBUF_EXPORT LogFinisher {
  public:
   void operator=(LogMessage& other);
 };
@@ -216,7 +216,7 @@ typedef void LogHandler(LogLevel level, const char* filename, int line,
 // have some code that tends to trigger them frequently and you know
 // the warnings are not important to you), use the LogSilencer class
 // below.
-PROTOBUF_API LogHandler* SetLogHandler(LogHandler* new_func);
+LIBPROTOBUF_EXPORT LogHandler* SetLogHandler(LogHandler* new_func);
 
 // Create a LogSilencer if you want to temporarily suppress all log
 // messages.  As long as any LogSilencer objects exist, non-fatal
@@ -225,7 +225,7 @@ PROTOBUF_API LogHandler* SetLogHandler(LogHandler* new_func);
 // accidentally suppress log messages occurring in another thread, but
 // since messages are generally for debugging purposes only, this isn't
 // a big deal.  If you want to intercept log messages, use SetLogHandler().
-class PROTOBUF_API LogSilencer {
+class LIBPROTOBUF_EXPORT LogSilencer {
  public:
   LogSilencer();
   ~LogSilencer();

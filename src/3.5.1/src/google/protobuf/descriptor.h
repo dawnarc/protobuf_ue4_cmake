@@ -173,7 +173,7 @@ struct DebugStringOptions {
 // which is needed when a pool has lazily_build_dependencies_ set.
 // Must be instantiated as mutable in a descriptor.
 namespace internal {
-class PROTOBUF_API LazyDescriptor {
+class LIBPROTOBUF_EXPORT LazyDescriptor {
  public:
   // Init function to be called at init time of a descriptor containing
   // a LazyDescriptor.
@@ -222,7 +222,7 @@ class PROTOBUF_API LazyDescriptor {
 // Message::GetDescriptor().  Generated message classes also have a
 // static method called descriptor() which returns the type's descriptor.
 // Use DescriptorPool to construct your own descriptors.
-class PROTOBUF_API Descriptor {
+class LIBPROTOBUF_EXPORT Descriptor {
  public:
   // The name of the message type, not including its scope.
   const string& name() const;
@@ -498,7 +498,7 @@ class PROTOBUF_API Descriptor {
 //   Reflection::FindKnownExtensionByName() or
 //   Reflection::FindKnownExtensionByNumber().
 // Use DescriptorPool to construct your own descriptors.
-class PROTOBUF_API FieldDescriptor {
+class LIBPROTOBUF_EXPORT FieldDescriptor {
  public:
   // Identifies a field type.  0 is reserved for errors.  The order is weird
   // for historical reasons.  Types 12 and up are new in proto2.
@@ -808,7 +808,7 @@ class PROTOBUF_API FieldDescriptor {
 
 
 // Describes a oneof defined in a message type.
-class PROTOBUF_API OneofDescriptor {
+class LIBPROTOBUF_EXPORT OneofDescriptor {
  public:
   const string& name() const;       // Name of this oneof.
   const string& full_name() const;  // Fully-qualified name of the oneof.
@@ -881,7 +881,7 @@ class PROTOBUF_API OneofDescriptor {
 // Describes an enum type defined in a .proto file.  To get the EnumDescriptor
 // for a generated enum type, call TypeName_descriptor().  Use DescriptorPool
 // to construct your own descriptors.
-class PROTOBUF_API EnumDescriptor {
+class LIBPROTOBUF_EXPORT EnumDescriptor {
  public:
   // The name of this enum type in the containing scope.
   const string& name() const;
@@ -1036,7 +1036,7 @@ class PROTOBUF_API EnumDescriptor {
 // for its type, then use EnumDescriptor::FindValueByName() or
 // EnumDescriptor::FindValueByNumber().  Use DescriptorPool to construct
 // your own descriptors.
-class PROTOBUF_API EnumValueDescriptor {
+class LIBPROTOBUF_EXPORT EnumValueDescriptor {
  public:
   const string& name() const;  // Name of this enum constant.
   int index() const;           // Index within the enums's Descriptor.
@@ -1114,7 +1114,7 @@ class PROTOBUF_API EnumValueDescriptor {
 // call Service::GetDescriptor().  Generated service classes also have a
 // static method called descriptor() which returns the type's
 // ServiceDescriptor.  Use DescriptorPool to construct your own descriptors.
-class PROTOBUF_API ServiceDescriptor {
+class LIBPROTOBUF_EXPORT ServiceDescriptor {
  public:
   // The name of the service, not including its containing scope.
   const string& name() const;
@@ -1194,7 +1194,7 @@ class PROTOBUF_API ServiceDescriptor {
 // a service, first get its ServiceDescriptor, then call
 // ServiceDescriptor::FindMethodByName().  Use DescriptorPool to construct your
 // own descriptors.
-class PROTOBUF_API MethodDescriptor {
+class LIBPROTOBUF_EXPORT MethodDescriptor {
  public:
   // Name of this method, not including containing scope.
   const string& name() const;
@@ -1279,7 +1279,7 @@ class PROTOBUF_API MethodDescriptor {
 // Describes a whole .proto file.  To get the FileDescriptor for a compiled-in
 // file, get the descriptor for something defined in that file and call
 // descriptor->file().  Use DescriptorPool to construct your own descriptors.
-class PROTOBUF_API FileDescriptor {
+class LIBPROTOBUF_EXPORT FileDescriptor {
  public:
   // The filename, relative to the source tree.
   // e.g. "google/protobuf/descriptor.proto"
@@ -1494,7 +1494,7 @@ class PROTOBUF_API FileDescriptor {
 //
 // You can also search for descriptors within a DescriptorPool by name, and
 // extensions by number.
-class PROTOBUF_API DescriptorPool {
+class LIBPROTOBUF_EXPORT DescriptorPool {
  public:
   // Create a normal, empty DescriptorPool.
   DescriptorPool();
@@ -1577,7 +1577,7 @@ class PROTOBUF_API DescriptorPool {
   // When converting a FileDescriptorProto to a FileDescriptor, various
   // errors might be detected in the input.  The caller may handle these
   // programmatically by implementing an ErrorCollector.
-  class PROTOBUF_API ErrorCollector {
+  class LIBPROTOBUF_EXPORT ErrorCollector {
    public:
     inline ErrorCollector() {}
     virtual ~ErrorCollector();

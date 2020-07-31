@@ -118,7 +118,7 @@ FileInputStream::CopyingFileInputStream::CopyingFileInputStream(
 FileInputStream::CopyingFileInputStream::~CopyingFileInputStream() {
   if (close_on_delete_) {
     if (!Close()) {
-      GOOGLE_LOG(ERROR) << "close() failed: " << errno_;
+      GOOGLE_LOG(ERROR) << "close() failed: " << strerror(errno_);
     }
   }
 }
@@ -216,7 +216,7 @@ FileOutputStream::CopyingFileOutputStream::CopyingFileOutputStream(
 FileOutputStream::CopyingFileOutputStream::~CopyingFileOutputStream() {
   if (close_on_delete_) {
     if (!Close()) {
-      GOOGLE_LOG(ERROR) << "close() failed: " << errno_;
+      GOOGLE_LOG(ERROR) << "close() failed: " << strerror(errno_);
     }
   }
 }

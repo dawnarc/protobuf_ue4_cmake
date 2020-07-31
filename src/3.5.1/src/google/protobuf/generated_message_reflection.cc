@@ -49,11 +49,6 @@
 
 #define GOOGLE_PROTOBUF_HAS_ONEOF
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4065)
-#pragma warning(disable: 4506)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 namespace internal {

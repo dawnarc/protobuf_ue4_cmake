@@ -159,7 +159,11 @@ struct ArenaOptions {
 
 // Support for non-RTTI environments. (The metrics hooks API uses type
 // information.)
+#ifndef GOOGLE_PROTOBUF_NO_RTTI
+#define RTTI_TYPE_ID(type) (&typeid(type))
+#else
 #define RTTI_TYPE_ID(type) (NULL)
+#endif
 
 // Arena allocator. Arena allocation replaces ordinary (heap-based) allocation
 // with new/delete, and improves performance by aggregating allocations into
@@ -211,7 +215,7 @@ struct ArenaOptions {
 //
 // Do NOT subclass Arena. This class will be marked as final when C++11 is
 // enabled.
-class PROTOBUF_API Arena {
+class LIBPROTOBUF_EXPORT Arena {
  public:
   // Arena constructor taking custom options. See ArenaOptions below for
   // descriptions of the options available.

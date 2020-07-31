@@ -49,7 +49,7 @@ namespace io {
 class ZeroCopyOutputStream;     // zero_copy_stream.h
 
 // Records annotations about a Printer's output.
-class PROTOBUF_API AnnotationCollector {
+class LIBPROTOBUF_EXPORT AnnotationCollector {
  public:
   // Records that the bytes in file_path beginning with begin_offset and ending
   // before end_offset are associated with the SourceCodeInfo-style path.
@@ -162,7 +162,7 @@ class AnnotationProtoCollector : public AnnotationCollector {
 // This code associates the span covering "call(bar,bar)" in the output with the
 // call_ descriptor.
 
-class PROTOBUF_API Printer {
+class LIBPROTOBUF_EXPORT Printer {
  public:
   // Create a printer that writes text to the given output stream.  Use the
   // given character as the delimiter for variables.

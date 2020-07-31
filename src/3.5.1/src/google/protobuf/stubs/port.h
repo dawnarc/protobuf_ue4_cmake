@@ -72,7 +72,7 @@
     #define PROTOBUF_LITTLE_ENDIAN 1
   #endif
 #endif
-#if defined(_MSC_VER) && defined(PROTOBUF_API)
+#if defined(_MSC_VER) && defined(PROTOBUF_USE_DLLS)
   #ifdef LIBPROTOBUF_EXPORTS
     #define LIBPROTOBUF_EXPORT __declspec(dllexport)
   #else
@@ -86,9 +86,6 @@
 #else
   #define LIBPROTOBUF_EXPORT
   #define LIBPROTOC_EXPORT
-
-  #undef PROTOBUF_API
-  #define PROTOBUF_API
 #endif
 
 // These #includes are for the byte swap functions declared later on.
@@ -458,7 +455,7 @@ class Bits {
 
 // ===================================================================
 // from google3/util/endian/endian.h
-PROTOBUF_API uint32 ghtonl(uint32 x);
+LIBPROTOBUF_EXPORT uint32 ghtonl(uint32 x);
 
 class BigEndian {
  public:

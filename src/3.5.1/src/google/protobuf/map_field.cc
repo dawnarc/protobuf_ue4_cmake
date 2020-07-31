@@ -33,10 +33,6 @@
 
 #include <vector>
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4506)
-#endif //_MSC_VER
-
 namespace google {
 namespace protobuf {
 namespace internal {

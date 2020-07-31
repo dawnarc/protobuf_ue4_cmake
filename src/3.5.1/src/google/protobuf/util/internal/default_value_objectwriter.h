@@ -58,7 +58,7 @@ namespace converter {
 // ObjectWriter when EndObject() is called on the root object. It also writes
 // out all non-repeated primitive fields that haven't been explicitly rendered
 // with their default values (0 for numbers, "" for strings, etc).
-class PROTOBUF_API DefaultValueObjectWriter : public ObjectWriter {
+class LIBPROTOBUF_EXPORT DefaultValueObjectWriter : public ObjectWriter {
  public:
   // A Callback function to check whether a field needs to be scrubbed.
   //
@@ -141,7 +141,7 @@ class PROTOBUF_API DefaultValueObjectWriter : public ObjectWriter {
 
   // "Node" represents a node in the tree that holds the input of
   // DefaultValueObjectWriter.
-  class PROTOBUF_API Node {
+  class LIBPROTOBUF_EXPORT Node {
    public:
     Node(const string& name, const google::protobuf::Type* type, NodeKind kind,
          const DataPiece& data, bool is_placeholder,

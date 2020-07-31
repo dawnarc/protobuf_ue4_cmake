@@ -227,7 +227,7 @@ static inline bool HandleString(io::CodedInputStream* input, MessageLite* msg,
   size_t size;
 #endif
 
-    string* value = nullptr;
+    string* value;
     switch (cardinality) {
       case Cardinality_SINGULAR:
         // TODO(ckennelly): Is this optimal?

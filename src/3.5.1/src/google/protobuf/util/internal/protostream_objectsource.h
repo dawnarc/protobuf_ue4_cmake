@@ -72,7 +72,7 @@ class TypeInfo;
 //                              <your message google::protobuf::Type>);
 //
 //   Status status = os.WriteTo(<some ObjectWriter>);
-class PROTOBUF_API ProtoStreamObjectSource : public ObjectSource {
+class LIBPROTOBUF_EXPORT ProtoStreamObjectSource : public ObjectSource {
  public:
   ProtoStreamObjectSource(google::protobuf::io::CodedInputStream* stream,
                           TypeResolver* type_resolver,
