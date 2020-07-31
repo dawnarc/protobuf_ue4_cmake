@@ -257,7 +257,7 @@ struct MigrationSchema {
 //    of whatever type the individual field would be.  Strings and
 //    Messages use RepeatedPtrFields while everything else uses
 //    RepeatedFields.
-class LIBPROTOBUF_EXPORT GeneratedMessageReflection PROTOBUF_FINAL : public Reflection {
+class PROTOBUF_API GeneratedMessageReflection PROTOBUF_FINAL : public Reflection {
  public:
   // Constructs a GeneratedMessageReflection.
   // Parameters:
@@ -658,16 +658,15 @@ class LIBPROTOBUF_EXPORT GeneratedMessageReflection PROTOBUF_FINAL : public Refl
 //
 // If you need to compile without RTTI, simply #define GOOGLE_PROTOBUF_NO_RTTI.
 // On MSVC, this should be detected automatically.
-// template<typename To, typename From>
-// inline To dynamic_cast_if_available(From from) {
-// #if defined(GOOGLE_PROTOBUF_NO_RTTI) || (defined(_MSC_VER)&&!defined(_CPPRTTI))
-  //Avoid the compiler warning about unused variables.
-  // (void)from;
-  // return NULL;
-// #else
-  // return dynamic_cast<To>(from);
-// #endif
-
+    template<typename To, typename From>
+    inline To dynamic_cast_if_available(From from) {
+    // #if defined(GOOGLE_PROTOBUF_NO_RTTI) || (defined(_MSC_VER)&&!defined(_CPPRTTI))
+      //Avoid the compiler warning about unused variables.
+      // (void)from;
+      // return NULL;
+    // #else
+      // return dynamic_cast<To>(from);
+    // #endif
     return NULL;
 }
 
@@ -709,7 +708,7 @@ T* DynamicCastToGenerated(Message* from) {
   return const_cast<T*>(DynamicCastToGenerated<const T>(message_const));
 }
 
-LIBPROTOBUF_EXPORT void AssignDescriptors(
+PROTOBUF_API void AssignDescriptors(
     const string& filename, const MigrationSchema* schemas,
     const Message* const* default_instances_, const uint32* offsets,
     MessageFactory* factory,
@@ -718,10 +717,10 @@ LIBPROTOBUF_EXPORT void AssignDescriptors(
     const EnumDescriptor** file_level_enum_descriptors,
     const ServiceDescriptor** file_level_service_descriptors);
 
-LIBPROTOBUF_EXPORT void RegisterAllTypes(const Metadata* file_level_metadata, int size);
+PROTOBUF_API void RegisterAllTypes(const Metadata* file_level_metadata, int size);
 
 // These cannot be in lite so we put them in the reflection.
-LIBPROTOBUF_EXPORT void UnknownFieldSetSerializer(const uint8* base, uint32 offset, uint32 tag,
+PROTOBUF_API void UnknownFieldSetSerializer(const uint8* base, uint32 offset, uint32 tag,
                                uint32 has_offset,
                                ::google::protobuf::io::CodedOutputStream* output);
 
