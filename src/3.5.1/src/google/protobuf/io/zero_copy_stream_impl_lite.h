@@ -63,7 +63,7 @@ namespace io {
 // ===================================================================
 
 // A ZeroCopyInputStream backed by an in-memory array of bytes.
-class LIBPROTOBUF_EXPORT ArrayInputStream : public ZeroCopyInputStream {
+class PROTOBUF_API ArrayInputStream : public ZeroCopyInputStream {
  public:
   // Create an InputStream that returns the bytes pointed to by "data".
   // "data" remains the property of the caller but must remain valid until
@@ -96,7 +96,7 @@ class LIBPROTOBUF_EXPORT ArrayInputStream : public ZeroCopyInputStream {
 // ===================================================================
 
 // A ZeroCopyOutputStream backed by an in-memory array of bytes.
-class LIBPROTOBUF_EXPORT ArrayOutputStream : public ZeroCopyOutputStream {
+class PROTOBUF_API ArrayOutputStream : public ZeroCopyOutputStream {
  public:
   // Create an OutputStream that writes to the bytes pointed to by "data".
   // "data" remains the property of the caller but must remain valid until
@@ -127,7 +127,7 @@ class LIBPROTOBUF_EXPORT ArrayOutputStream : public ZeroCopyOutputStream {
 // ===================================================================
 
 // A ZeroCopyOutputStream which appends bytes to a string.
-class LIBPROTOBUF_EXPORT StringOutputStream : public ZeroCopyOutputStream {
+class PROTOBUF_API StringOutputStream : public ZeroCopyOutputStream {
  public:
   // Create a StringOutputStream which appends bytes to the given string.
   // The string remains property of the caller, but it is mutated in arbitrary
@@ -173,7 +173,7 @@ class LIBPROTOBUF_EXPORT StringOutputStream : public ZeroCopyOutputStream {
 // CopyingInputStream implementations should avoid buffering if possible.
 // CopyingInputStreamAdaptor does its own buffering and will read data
 // in large blocks.
-class LIBPROTOBUF_EXPORT CopyingInputStream {
+class PROTOBUF_API CopyingInputStream {
  public:
   virtual ~CopyingInputStream() {}
 
@@ -199,7 +199,7 @@ class LIBPROTOBUF_EXPORT CopyingInputStream {
 // If you want to read from file descriptors or C++ istreams, this is
 // already implemented for you:  use FileInputStream or IstreamInputStream
 // respectively.
-class LIBPROTOBUF_EXPORT CopyingInputStreamAdaptor : public ZeroCopyInputStream {
+class PROTOBUF_API CopyingInputStreamAdaptor : public ZeroCopyInputStream {
  public:
   // Creates a stream that reads from the given CopyingInputStream.
   // If a block_size is given, it specifies the number of bytes that
@@ -267,7 +267,7 @@ class LIBPROTOBUF_EXPORT CopyingInputStreamAdaptor : public ZeroCopyInputStream 
 // CopyingOutputStream implementations should avoid buffering if possible.
 // CopyingOutputStreamAdaptor does its own buffering and will write data
 // in large blocks.
-class LIBPROTOBUF_EXPORT CopyingOutputStream {
+class PROTOBUF_API CopyingOutputStream {
  public:
   virtual ~CopyingOutputStream() {}
 
@@ -283,7 +283,7 @@ class LIBPROTOBUF_EXPORT CopyingOutputStream {
 // If you want to write to file descriptors or C++ ostreams, this is
 // already implemented for you:  use FileOutputStream or OstreamOutputStream
 // respectively.
-class LIBPROTOBUF_EXPORT CopyingOutputStreamAdaptor : public ZeroCopyOutputStream {
+class PROTOBUF_API CopyingOutputStreamAdaptor : public ZeroCopyOutputStream {
  public:
   // Creates a stream that writes to the given Unix file descriptor.
   // If a block_size is given, it specifies the size of the buffers

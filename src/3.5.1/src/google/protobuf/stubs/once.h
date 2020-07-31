@@ -119,7 +119,7 @@ typedef internal::AtomicWord ProtobufOnceType;
 
 #define GOOGLE_PROTOBUF_ONCE_INIT ::google::protobuf::ONCE_STATE_UNINITIALIZED
 
-LIBPROTOBUF_EXPORT
+PROTOBUF_API
 void GoogleOnceInitImpl(ProtobufOnceType* once, Closure* closure);
 
 inline void GoogleOnceInit(ProtobufOnceType* once, void (*init_func)()) {

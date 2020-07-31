@@ -33,7 +33,7 @@
 
 namespace protobuf_google_2fprotobuf_2fsource_5fcontext_2eproto {
 // Internal implementation detail -- do not use these members.
-struct LIBPROTOBUF_EXPORT TableStruct {
+struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[1];
@@ -41,10 +41,10 @@ struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void LIBPROTOBUF_EXPORT AddDescriptors();
-void LIBPROTOBUF_EXPORT InitDefaultsSourceContextImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsSourceContext();
-inline void LIBPROTOBUF_EXPORT InitDefaults() {
+void PROTOBUF_API AddDescriptors();
+void PROTOBUF_API InitDefaultsSourceContextImpl();
+void PROTOBUF_API InitDefaultsSourceContext();
+inline void PROTOBUF_API InitDefaults() {
   InitDefaultsSourceContext();
 }
 }  // namespace protobuf_google_2fprotobuf_2fsource_5fcontext_2eproto
@@ -52,7 +52,7 @@ namespace google {
 namespace protobuf {
 class SourceContext;
 class SourceContextDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern SourceContextDefaultTypeInternal _SourceContext_default_instance_;
+PROTOBUF_API extern SourceContextDefaultTypeInternal _SourceContext_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -60,7 +60,7 @@ namespace protobuf {
 
 // ===================================================================
 
-class LIBPROTOBUF_EXPORT SourceContext : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.SourceContext) */ {
+class PROTOBUF_API SourceContext : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.SourceContext) */ {
  public:
   SourceContext();
   virtual ~SourceContext();

@@ -175,7 +175,7 @@ typedef string::difference_type stringpiece_ssize_type;
 #define STRINGPIECE_CHECK_SIZE 0
 #endif
 
-class LIBPROTOBUF_EXPORT StringPiece {
+class PROTOBUF_API StringPiece {
  private:
   const char* ptr_;
   stringpiece_ssize_type length_;

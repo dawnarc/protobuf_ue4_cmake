@@ -104,8 +104,8 @@ namespace internal {
 #endif
 
 // Constants for special floating point values.
-LIBPROTOBUF_EXPORT double Infinity();
-LIBPROTOBUF_EXPORT double NaN();
+PROTOBUF_API double Infinity();
+PROTOBUF_API double NaN();
 
 
 // True if IsInitialized() is true for all elements of t.  Type is expected
@@ -120,9 +120,9 @@ template <class Type> bool AllAreInitialized(const Type& t) {
   return true;
 }
 
-LIBPROTOBUF_EXPORT void InitProtobufDefaults();
+PROTOBUF_API void InitProtobufDefaults();
 
-struct LIBPROTOBUF_EXPORT FieldMetadata {
+struct PROTOBUF_API FieldMetadata {
   uint32 offset;  // offset of this field in the struct
   uint32 tag;     // field * 8 + wire_type
   // byte offset * 8 + bit_offset;
@@ -170,10 +170,10 @@ typedef void (*SpecialSerializer)(const uint8* base, uint32 offset, uint32 tag,
                                   uint32 has_offset,
                                   ::google::protobuf::io::CodedOutputStream* output);
 
-LIBPROTOBUF_EXPORT void ExtensionSerializer(const uint8* base, uint32 offset, uint32 tag,
+PROTOBUF_API void ExtensionSerializer(const uint8* base, uint32 offset, uint32 tag,
                          uint32 has_offset,
                          ::google::protobuf::io::CodedOutputStream* output);
-LIBPROTOBUF_EXPORT void UnknownFieldSerializerLite(const uint8* base, uint32 offset, uint32 tag,
+PROTOBUF_API void UnknownFieldSerializerLite(const uint8* base, uint32 offset, uint32 tag,
                                 uint32 has_offset,
                                 ::google::protobuf::io::CodedOutputStream* output);
 
@@ -182,7 +182,7 @@ struct SerializationTable {
   const FieldMetadata* field_table;
 };
 
-LIBPROTOBUF_EXPORT void SerializeInternal(const uint8* base, const FieldMetadata* table,
+PROTOBUF_API void SerializeInternal(const uint8* base, const FieldMetadata* table,
                        int num_fields, ::google::protobuf::io::CodedOutputStream* output);
 
 inline void TableSerialize(const ::google::protobuf::MessageLite& msg,
@@ -274,8 +274,8 @@ void MapFieldSerializer(const uint8* base, uint32 offset, uint32 tag,
   }
 }
 
-LIBPROTOBUF_EXPORT MessageLite* DuplicateIfNonNullInternal(MessageLite* message, Arena* arena);
-LIBPROTOBUF_EXPORT MessageLite* GetOwnedMessageInternal(Arena* message_arena,
+PROTOBUF_API MessageLite* DuplicateIfNonNullInternal(MessageLite* message, Arena* arena);
+PROTOBUF_API MessageLite* GetOwnedMessageInternal(Arena* message_arena,
                                      MessageLite* submessage,
                                      Arena* submessage_arena);
 

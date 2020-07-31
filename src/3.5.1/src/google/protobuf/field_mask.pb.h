@@ -33,7 +33,7 @@
 
 namespace protobuf_google_2fprotobuf_2ffield_5fmask_2eproto {
 // Internal implementation detail -- do not use these members.
-struct LIBPROTOBUF_EXPORT TableStruct {
+struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[1];
@@ -41,10 +41,10 @@ struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void LIBPROTOBUF_EXPORT AddDescriptors();
-void LIBPROTOBUF_EXPORT InitDefaultsFieldMaskImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsFieldMask();
-inline void LIBPROTOBUF_EXPORT InitDefaults() {
+void PROTOBUF_API AddDescriptors();
+void PROTOBUF_API InitDefaultsFieldMaskImpl();
+void PROTOBUF_API InitDefaultsFieldMask();
+inline void PROTOBUF_API InitDefaults() {
   InitDefaultsFieldMask();
 }
 }  // namespace protobuf_google_2fprotobuf_2ffield_5fmask_2eproto
@@ -52,7 +52,7 @@ namespace google {
 namespace protobuf {
 class FieldMask;
 class FieldMaskDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern FieldMaskDefaultTypeInternal _FieldMask_default_instance_;
+PROTOBUF_API extern FieldMaskDefaultTypeInternal _FieldMask_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -60,7 +60,7 @@ namespace protobuf {
 
 // ===================================================================
 
-class LIBPROTOBUF_EXPORT FieldMask : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.FieldMask) */ {
+class PROTOBUF_API FieldMask : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.FieldMask) */ {
  public:
   FieldMask();
   virtual ~FieldMask();

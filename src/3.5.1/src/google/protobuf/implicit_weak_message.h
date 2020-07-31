@@ -39,7 +39,7 @@ namespace google {
 namespace protobuf {
 namespace internal {
 
-class LIBPROTOBUF_EXPORT ImplicitWeakMessage : public MessageLite {
+class PROTOBUF_API ImplicitWeakMessage : public MessageLite {
  public:
   ImplicitWeakMessage() : arena_(NULL) {}
   explicit ImplicitWeakMessage(Arena* arena) : arena_(arena) {}

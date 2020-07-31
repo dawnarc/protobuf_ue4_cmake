@@ -60,7 +60,7 @@ inline size_t AlignUpTo8(size_t n) {
 // in turn would be templates, which will/cannot happen. However separating
 // the memory allocation part from the cruft of the API users expect we can
 // use #ifdef the select the best implementation based on hardware / OS.
-class LIBPROTOBUF_EXPORT ArenaImpl {
+class PROTOBUF_API ArenaImpl {
  public:
   struct Options {
     size_t start_block_size;

@@ -74,7 +74,7 @@ class UnknownField;                 // below
 //
 // This class is necessarily tied to the protocol buffer wire format, unlike
 // the Reflection interface which is independent of any serialization scheme.
-class LIBPROTOBUF_EXPORT UnknownFieldSet {
+class PROTOBUF_API UnknownFieldSet {
  public:
   UnknownFieldSet();
   ~UnknownFieldSet();
@@ -182,7 +182,7 @@ class LIBPROTOBUF_EXPORT UnknownFieldSet {
 };
 
 // Represents one field in an UnknownFieldSet.
-class LIBPROTOBUF_EXPORT UnknownField {
+class PROTOBUF_API UnknownField {
  public:
   enum Type {
     TYPE_VARINT,

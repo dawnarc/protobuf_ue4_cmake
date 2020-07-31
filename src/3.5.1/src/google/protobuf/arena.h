@@ -217,7 +217,7 @@ struct ArenaOptions {
 //
 // Do NOT subclass Arena. This class will be marked as final when C++11 is
 // enabled.
-class LIBPROTOBUF_EXPORT Arena {
+class PROTOBUF_API Arena {
  public:
   // Arena constructor taking custom options. See ArenaOptions below for
   // descriptions of the options available.

@@ -73,7 +73,7 @@ class DiskSourceTree;
 //
 // Note:  This class does not implement FindFileContainingSymbol() or
 //   FindFileContainingExtension(); these will always return false.
-class LIBPROTOBUF_EXPORT SourceTreeDescriptorDatabase : public DescriptorDatabase {
+class PROTOBUF_API SourceTreeDescriptorDatabase : public DescriptorDatabase {
  public:
   SourceTreeDescriptorDatabase(SourceTree* source_tree);
   ~SourceTreeDescriptorDatabase();
@@ -109,7 +109,7 @@ class LIBPROTOBUF_EXPORT SourceTreeDescriptorDatabase : public DescriptorDatabas
   SourceTree* source_tree_;
   MultiFileErrorCollector* error_collector_;
 
-  class LIBPROTOBUF_EXPORT ValidationErrorCollector : public DescriptorPool::ErrorCollector {
+  class PROTOBUF_API ValidationErrorCollector : public DescriptorPool::ErrorCollector {
    public:
     ValidationErrorCollector(SourceTreeDescriptorDatabase* owner);
     ~ValidationErrorCollector();
@@ -145,7 +145,7 @@ class LIBPROTOBUF_EXPORT SourceTreeDescriptorDatabase : public DescriptorDatabas
 // You may find that SourceTreeDescriptorDatabase is more flexible.
 //
 // TODO(kenton):  I feel like this class is not well-named.
-class LIBPROTOBUF_EXPORT Importer {
+class PROTOBUF_API Importer {
  public:
   Importer(SourceTree* source_tree,
            MultiFileErrorCollector* error_collector);
@@ -185,7 +185,7 @@ class LIBPROTOBUF_EXPORT Importer {
 
 // If the importer encounters problems while trying to import the proto files,
 // it reports them to a MultiFileErrorCollector.
-class LIBPROTOBUF_EXPORT MultiFileErrorCollector {
+class PROTOBUF_API MultiFileErrorCollector {
  public:
   inline MultiFileErrorCollector() {}
   virtual ~MultiFileErrorCollector();
@@ -206,7 +206,7 @@ class LIBPROTOBUF_EXPORT MultiFileErrorCollector {
 // Used by the default implementation of Importer to resolve import statements
 // Most users will probably want to use the DiskSourceTree implementation,
 // below.
-class LIBPROTOBUF_EXPORT SourceTree {
+class PROTOBUF_API SourceTree {
  public:
   inline SourceTree() {}
   virtual ~SourceTree();
@@ -231,7 +231,7 @@ class LIBPROTOBUF_EXPORT SourceTree {
 // An implementation of SourceTree which loads files from locations on disk.
 // Multiple mappings can be set up to map locations in the DiskSourceTree to
 // locations in the physical filesystem.
-class LIBPROTOBUF_EXPORT DiskSourceTree : public SourceTree {
+class PROTOBUF_API DiskSourceTree : public SourceTree {
  public:
   DiskSourceTree();
   ~DiskSourceTree();

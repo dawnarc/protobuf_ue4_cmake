@@ -62,7 +62,7 @@ namespace internal {
 // Helper for EnumType_Parse functions: try to parse the string 'name' as an
 // enum name of the given type, returning true and filling in value on success,
 // or returning false and leaving value unchanged on failure.
-LIBPROTOBUF_EXPORT bool ParseNamedEnum(const EnumDescriptor* descriptor,
+PROTOBUF_API bool ParseNamedEnum(const EnumDescriptor* descriptor,
                     const string& name,
                     int* value);
 
@@ -79,7 +79,7 @@ bool ParseNamedEnum(const EnumDescriptor* descriptor,
 // Just a wrapper around printing the name of a value. The main point of this
 // function is not to be inlined, so that you can do this without including
 // descriptor.h.
-LIBPROTOBUF_EXPORT const string& NameOfEnum(const EnumDescriptor* descriptor, int value);
+PROTOBUF_API const string& NameOfEnum(const EnumDescriptor* descriptor, int value);
 
 }  // namespace internal
 }  // namespace protobuf

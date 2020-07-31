@@ -33,7 +33,7 @@
 
 namespace protobuf_google_2fprotobuf_2fwrappers_2eproto {
 // Internal implementation detail -- do not use these members.
-struct LIBPROTOBUF_EXPORT TableStruct {
+struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[9];
@@ -41,26 +41,26 @@ struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void LIBPROTOBUF_EXPORT AddDescriptors();
-void LIBPROTOBUF_EXPORT InitDefaultsDoubleValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsDoubleValue();
-void LIBPROTOBUF_EXPORT InitDefaultsFloatValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsFloatValue();
-void LIBPROTOBUF_EXPORT InitDefaultsInt64ValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsInt64Value();
-void LIBPROTOBUF_EXPORT InitDefaultsUInt64ValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsUInt64Value();
-void LIBPROTOBUF_EXPORT InitDefaultsInt32ValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsInt32Value();
-void LIBPROTOBUF_EXPORT InitDefaultsUInt32ValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsUInt32Value();
-void LIBPROTOBUF_EXPORT InitDefaultsBoolValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsBoolValue();
-void LIBPROTOBUF_EXPORT InitDefaultsStringValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsStringValue();
-void LIBPROTOBUF_EXPORT InitDefaultsBytesValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsBytesValue();
-inline void LIBPROTOBUF_EXPORT InitDefaults() {
+void PROTOBUF_API AddDescriptors();
+void PROTOBUF_API InitDefaultsDoubleValueImpl();
+void PROTOBUF_API InitDefaultsDoubleValue();
+void PROTOBUF_API InitDefaultsFloatValueImpl();
+void PROTOBUF_API InitDefaultsFloatValue();
+void PROTOBUF_API InitDefaultsInt64ValueImpl();
+void PROTOBUF_API InitDefaultsInt64Value();
+void PROTOBUF_API InitDefaultsUInt64ValueImpl();
+void PROTOBUF_API InitDefaultsUInt64Value();
+void PROTOBUF_API InitDefaultsInt32ValueImpl();
+void PROTOBUF_API InitDefaultsInt32Value();
+void PROTOBUF_API InitDefaultsUInt32ValueImpl();
+void PROTOBUF_API InitDefaultsUInt32Value();
+void PROTOBUF_API InitDefaultsBoolValueImpl();
+void PROTOBUF_API InitDefaultsBoolValue();
+void PROTOBUF_API InitDefaultsStringValueImpl();
+void PROTOBUF_API InitDefaultsStringValue();
+void PROTOBUF_API InitDefaultsBytesValueImpl();
+void PROTOBUF_API InitDefaultsBytesValue();
+inline void PROTOBUF_API InitDefaults() {
   InitDefaultsDoubleValue();
   InitDefaultsFloatValue();
   InitDefaultsInt64Value();
@@ -76,31 +76,31 @@ namespace google {
 namespace protobuf {
 class BoolValue;
 class BoolValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern BoolValueDefaultTypeInternal _BoolValue_default_instance_;
+PROTOBUF_API extern BoolValueDefaultTypeInternal _BoolValue_default_instance_;
 class BytesValue;
 class BytesValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern BytesValueDefaultTypeInternal _BytesValue_default_instance_;
+PROTOBUF_API extern BytesValueDefaultTypeInternal _BytesValue_default_instance_;
 class DoubleValue;
 class DoubleValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern DoubleValueDefaultTypeInternal _DoubleValue_default_instance_;
+PROTOBUF_API extern DoubleValueDefaultTypeInternal _DoubleValue_default_instance_;
 class FloatValue;
 class FloatValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern FloatValueDefaultTypeInternal _FloatValue_default_instance_;
+PROTOBUF_API extern FloatValueDefaultTypeInternal _FloatValue_default_instance_;
 class Int32Value;
 class Int32ValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern Int32ValueDefaultTypeInternal _Int32Value_default_instance_;
+PROTOBUF_API extern Int32ValueDefaultTypeInternal _Int32Value_default_instance_;
 class Int64Value;
 class Int64ValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern Int64ValueDefaultTypeInternal _Int64Value_default_instance_;
+PROTOBUF_API extern Int64ValueDefaultTypeInternal _Int64Value_default_instance_;
 class StringValue;
 class StringValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern StringValueDefaultTypeInternal _StringValue_default_instance_;
+PROTOBUF_API extern StringValueDefaultTypeInternal _StringValue_default_instance_;
 class UInt32Value;
 class UInt32ValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern UInt32ValueDefaultTypeInternal _UInt32Value_default_instance_;
+PROTOBUF_API extern UInt32ValueDefaultTypeInternal _UInt32Value_default_instance_;
 class UInt64Value;
 class UInt64ValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern UInt64ValueDefaultTypeInternal _UInt64Value_default_instance_;
+PROTOBUF_API extern UInt64ValueDefaultTypeInternal _UInt64Value_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -108,7 +108,7 @@ namespace protobuf {
 
 // ===================================================================
 
-class LIBPROTOBUF_EXPORT DoubleValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.DoubleValue) */ {
+class PROTOBUF_API DoubleValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.DoubleValue) */ {
  public:
   DoubleValue();
   virtual ~DoubleValue();
@@ -222,7 +222,7 @@ class LIBPROTOBUF_EXPORT DoubleValue : public ::google::protobuf::Message /* @@p
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT FloatValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.FloatValue) */ {
+class PROTOBUF_API FloatValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.FloatValue) */ {
  public:
   FloatValue();
   virtual ~FloatValue();
@@ -336,7 +336,7 @@ class LIBPROTOBUF_EXPORT FloatValue : public ::google::protobuf::Message /* @@pr
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT Int64Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Int64Value) */ {
+class PROTOBUF_API Int64Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Int64Value) */ {
  public:
   Int64Value();
   virtual ~Int64Value();
@@ -450,7 +450,7 @@ class LIBPROTOBUF_EXPORT Int64Value : public ::google::protobuf::Message /* @@pr
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT UInt64Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.UInt64Value) */ {
+class PROTOBUF_API UInt64Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.UInt64Value) */ {
  public:
   UInt64Value();
   virtual ~UInt64Value();
@@ -564,7 +564,7 @@ class LIBPROTOBUF_EXPORT UInt64Value : public ::google::protobuf::Message /* @@p
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT Int32Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Int32Value) */ {
+class PROTOBUF_API Int32Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Int32Value) */ {
  public:
   Int32Value();
   virtual ~Int32Value();
@@ -678,7 +678,7 @@ class LIBPROTOBUF_EXPORT Int32Value : public ::google::protobuf::Message /* @@pr
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT UInt32Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.UInt32Value) */ {
+class PROTOBUF_API UInt32Value : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.UInt32Value) */ {
  public:
   UInt32Value();
   virtual ~UInt32Value();
@@ -792,7 +792,7 @@ class LIBPROTOBUF_EXPORT UInt32Value : public ::google::protobuf::Message /* @@p
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT BoolValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.BoolValue) */ {
+class PROTOBUF_API BoolValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.BoolValue) */ {
  public:
   BoolValue();
   virtual ~BoolValue();
@@ -906,7 +906,7 @@ class LIBPROTOBUF_EXPORT BoolValue : public ::google::protobuf::Message /* @@pro
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT StringValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.StringValue) */ {
+class PROTOBUF_API StringValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.StringValue) */ {
  public:
   StringValue();
   virtual ~StringValue();
@@ -1037,7 +1037,7 @@ class LIBPROTOBUF_EXPORT StringValue : public ::google::protobuf::Message /* @@p
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT BytesValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.BytesValue) */ {
+class PROTOBUF_API BytesValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.BytesValue) */ {
  public:
   BytesValue();
   virtual ~BytesValue();

@@ -62,7 +62,7 @@ enum Code {
 };
 }  // namespace error
 
-class LIBPROTOBUF_EXPORT Status {
+class PROTOBUF_API Status {
  public:
   // Creates a "successful" status.
   Status();
@@ -106,7 +106,7 @@ class LIBPROTOBUF_EXPORT Status {
 };
 
 // Prints a human-readable representation of 'x' to 'os'.
-LIBPROTOBUF_EXPORT ostream& operator<<(ostream& os, const Status& x);
+PROTOBUF_API ostream& operator<<(ostream& os, const Status& x);
 
 #define EXPECT_OK(value) EXPECT_TRUE((value).ok())
 

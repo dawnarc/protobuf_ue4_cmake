@@ -33,7 +33,7 @@
 
 namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
 // Internal implementation detail -- do not use these members.
-struct LIBPROTOBUF_EXPORT TableStruct {
+struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[1];
@@ -41,10 +41,10 @@ struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void LIBPROTOBUF_EXPORT AddDescriptors();
-void LIBPROTOBUF_EXPORT InitDefaultsTimestampImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsTimestamp();
-inline void LIBPROTOBUF_EXPORT InitDefaults() {
+void PROTOBUF_API AddDescriptors();
+void PROTOBUF_API InitDefaultsTimestampImpl();
+void PROTOBUF_API InitDefaultsTimestamp();
+inline void PROTOBUF_API InitDefaults() {
   InitDefaultsTimestamp();
 }
 }  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
@@ -52,7 +52,7 @@ namespace google {
 namespace protobuf {
 class Timestamp;
 class TimestampDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern TimestampDefaultTypeInternal _Timestamp_default_instance_;
+PROTOBUF_API extern TimestampDefaultTypeInternal _Timestamp_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -60,7 +60,7 @@ namespace protobuf {
 
 // ===================================================================
 
-class LIBPROTOBUF_EXPORT Timestamp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Timestamp) */ {
+class PROTOBUF_API Timestamp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Timestamp) */ {
  public:
   Timestamp();
   virtual ~Timestamp();

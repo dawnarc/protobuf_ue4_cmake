@@ -131,20 +131,20 @@ class ExplicitlyConstructed {
 // Default empty string object. Don't use this directly. Instead, call
 // GetEmptyString() to get the reference.
 extern ExplicitlyConstructed< ::std::string> fixed_address_empty_string;
-LIBPROTOBUF_EXPORT extern ProtobufOnceType empty_string_once_init_;
-LIBPROTOBUF_EXPORT void InitEmptyString();
+PROTOBUF_API extern ProtobufOnceType empty_string_once_init_;
+PROTOBUF_API void InitEmptyString();
 
 
-LIBPROTOBUF_EXPORT inline const ::std::string& GetEmptyStringAlreadyInited() {
+PROTOBUF_API inline const ::std::string& GetEmptyStringAlreadyInited() {
   return fixed_address_empty_string.get();
 }
 
-LIBPROTOBUF_EXPORT inline const ::std::string& GetEmptyString() {
+PROTOBUF_API inline const ::std::string& GetEmptyString() {
   ::google::protobuf::GoogleOnceInit(&empty_string_once_init_, &InitEmptyString);
   return GetEmptyStringAlreadyInited();
 }
 
-LIBPROTOBUF_EXPORT size_t StringSpaceUsedExcludingSelfLong(const string& str);
+PROTOBUF_API size_t StringSpaceUsedExcludingSelfLong(const string& str);
 #endif  // SWIG
 }  // namespace internal
 
@@ -171,7 +171,7 @@ LIBPROTOBUF_EXPORT size_t StringSpaceUsedExcludingSelfLong(const string& str);
 // is best when you only have a small number of message types linked
 // into your binary, in which case the size of the protocol buffers
 // runtime itself is the biggest problem.
-class LIBPROTOBUF_EXPORT MessageLite {
+class PROTOBUF_API MessageLite {
  public:
   inline MessageLite() {}
   virtual ~MessageLite() {}
@@ -392,7 +392,7 @@ class LIBPROTOBUF_EXPORT MessageLite {
 
 namespace internal {
 
-extern bool LIBPROTOBUF_EXPORT proto3_preserve_unknown_;
+extern bool PROTOBUF_API proto3_preserve_unknown_;
 
 // DO NOT USE: For migration only. Will be removed when Proto3 defaults to
 // preserve unknowns.
@@ -402,7 +402,7 @@ inline bool GetProto3PreserveUnknownsDefault() {
 
 // DO NOT USE: For migration only. Will be removed when Proto3 defaults to
 // preserve unknowns.
-void LIBPROTOBUF_EXPORT SetProto3PreserveUnknownsDefault(bool preserve);
+void PROTOBUF_API SetProto3PreserveUnknownsDefault(bool preserve);
 }  // namespace internal
 
 

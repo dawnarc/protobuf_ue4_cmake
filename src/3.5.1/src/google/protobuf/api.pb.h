@@ -35,7 +35,7 @@
 
 namespace protobuf_google_2fprotobuf_2fapi_2eproto {
 // Internal implementation detail -- do not use these members.
-struct LIBPROTOBUF_EXPORT TableStruct {
+struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[3];
@@ -43,14 +43,14 @@ struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void LIBPROTOBUF_EXPORT AddDescriptors();
-void LIBPROTOBUF_EXPORT InitDefaultsApiImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsApi();
-void LIBPROTOBUF_EXPORT InitDefaultsMethodImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsMethod();
-void LIBPROTOBUF_EXPORT InitDefaultsMixinImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsMixin();
-inline void LIBPROTOBUF_EXPORT InitDefaults() {
+void PROTOBUF_API AddDescriptors();
+void PROTOBUF_API InitDefaultsApiImpl();
+void PROTOBUF_API InitDefaultsApi();
+void PROTOBUF_API InitDefaultsMethodImpl();
+void PROTOBUF_API InitDefaultsMethod();
+void PROTOBUF_API InitDefaultsMixinImpl();
+void PROTOBUF_API InitDefaultsMixin();
+inline void PROTOBUF_API InitDefaults() {
   InitDefaultsApi();
   InitDefaultsMethod();
   InitDefaultsMixin();
@@ -60,13 +60,13 @@ namespace google {
 namespace protobuf {
 class Api;
 class ApiDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern ApiDefaultTypeInternal _Api_default_instance_;
+PROTOBUF_API extern ApiDefaultTypeInternal _Api_default_instance_;
 class Method;
 class MethodDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern MethodDefaultTypeInternal _Method_default_instance_;
+PROTOBUF_API extern MethodDefaultTypeInternal _Method_default_instance_;
 class Mixin;
 class MixinDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern MixinDefaultTypeInternal _Mixin_default_instance_;
+PROTOBUF_API extern MixinDefaultTypeInternal _Mixin_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -74,7 +74,7 @@ namespace protobuf {
 
 // ===================================================================
 
-class LIBPROTOBUF_EXPORT Api : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Api) */ {
+class PROTOBUF_API Api : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Api) */ {
  public:
   Api();
   virtual ~Api();
@@ -252,7 +252,7 @@ class LIBPROTOBUF_EXPORT Api : public ::google::protobuf::Message /* @@protoc_in
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT Method : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Method) */ {
+class PROTOBUF_API Method : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Method) */ {
  public:
   Method();
   virtual ~Method();
@@ -423,7 +423,7 @@ class LIBPROTOBUF_EXPORT Method : public ::google::protobuf::Message /* @@protoc
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT Mixin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Mixin) */ {
+class PROTOBUF_API Mixin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Mixin) */ {
  public:
   Mixin();
   virtual ~Mixin();

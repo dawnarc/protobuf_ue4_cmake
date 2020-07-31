@@ -53,7 +53,7 @@ class FieldContext;
 // Regular users should consider using or subclassing DefaultFieldComparator
 // rather than this interface.
 // Currently, this does not support comparing unknown fields.
-class LIBPROTOBUF_EXPORT FieldComparator {
+class PROTOBUF_API FieldComparator {
  public:
   FieldComparator();
   virtual ~FieldComparator();
@@ -94,7 +94,7 @@ class LIBPROTOBUF_EXPORT FieldComparator {
 // Basic implementation of FieldComparator.  Supports three modes of floating
 // point value comparison: exact, approximate using MathUtil::AlmostEqual
 // method, and arbitrarily precise using MathUtil::WithinFractionOrMargin.
-class LIBPROTOBUF_EXPORT DefaultFieldComparator : public FieldComparator {
+class PROTOBUF_API DefaultFieldComparator : public FieldComparator {
  public:
   enum FloatComparison {
      EXACT,               // Floats and doubles are compared exactly.

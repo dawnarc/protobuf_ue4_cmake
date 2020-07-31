@@ -69,7 +69,7 @@ class ObjectWriter;
 //
 // This parser is thread-compatible as long as only one thread is calling a
 // Parse() method at a time.
-class LIBPROTOBUF_EXPORT JsonStreamParser {
+class PROTOBUF_API JsonStreamParser {
  public:
   // Creates a JsonStreamParser that will write to the given ObjectWriter.
   explicit JsonStreamParser(ObjectWriter* ow);

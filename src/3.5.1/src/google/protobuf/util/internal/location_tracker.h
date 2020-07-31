@@ -42,7 +42,7 @@ namespace converter {
 
 // LocationTrackerInterface is an interface for classes that track
 // the location information for the purpose of error reporting.
-class LIBPROTOBUF_EXPORT LocationTrackerInterface {
+class PROTOBUF_API LocationTrackerInterface {
  public:
   virtual ~LocationTrackerInterface() {}
 

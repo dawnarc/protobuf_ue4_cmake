@@ -125,11 +125,11 @@ static const int kMinHeaderVersionForProtoc = 3005000;
 
 // Verifies that the headers and libraries are compatible.  Use the macro
 // below to call this.
-void LIBPROTOBUF_EXPORT VerifyVersion(int headerVersion, int minLibraryVersion,
+void PROTOBUF_API VerifyVersion(int headerVersion, int minLibraryVersion,
                                       const char* filename);
 
 // Converts a numeric version number to a string.
-std::string LIBPROTOBUF_EXPORT VersionString(int version);
+std::string PROTOBUF_API VersionString(int version);
 
 }  // namespace internal
 
@@ -151,14 +151,14 @@ namespace internal {
 
 // Checks if the buffer contains structurally-valid UTF-8.  Implemented in
 // structurally_valid.cc.
-LIBPROTOBUF_EXPORT bool IsStructurallyValidUTF8(const char* buf, int len);
+PROTOBUF_API bool IsStructurallyValidUTF8(const char* buf, int len);
 
 inline bool IsStructurallyValidUTF8(const std::string& str) {
   return IsStructurallyValidUTF8(str.data(), static_cast<int>(str.length()));
 }
 
 // Returns initial number of bytes of structually valid UTF-8.
-LIBPROTOBUF_EXPORT int UTF8SpnStructurallyValid(const StringPiece& str);
+PROTOBUF_API int UTF8SpnStructurallyValid(const StringPiece& str);
 
 // Coerce UTF-8 byte string in src_str to be
 // a structurally-valid equal-length string by selectively
@@ -172,7 +172,7 @@ LIBPROTOBUF_EXPORT int UTF8SpnStructurallyValid(const StringPiece& str);
 //
 // Optimized for: all structurally valid and no byte copying is done.
 //
-LIBPROTOBUF_EXPORT char* UTF8CoerceToStructurallyValid(
+PROTOBUF_API char* UTF8CoerceToStructurallyValid(
     const StringPiece& str, char* dst, char replace_char);
 
 }  // namespace internal
@@ -194,16 +194,16 @@ LIBPROTOBUF_EXPORT char* UTF8CoerceToStructurallyValid(
 // It is safe to call this multiple times.  However, it is not safe to use
 // any other part of the protocol buffers library after
 // ShutdownProtobufLibrary() has been called.
-LIBPROTOBUF_EXPORT void ShutdownProtobufLibrary();
+PROTOBUF_API void ShutdownProtobufLibrary();
 
 namespace internal {
 
 // Register a function to be called when ShutdownProtocolBuffers() is called.
-LIBPROTOBUF_EXPORT void OnShutdown(void (*func)());
+PROTOBUF_API void OnShutdown(void (*func)());
 // Destroy the string (call string destructor)
-LIBPROTOBUF_EXPORT void OnShutdownDestroyString(const std::string* ptr);
+PROTOBUF_API void OnShutdownDestroyString(const std::string* ptr);
 // Destroy (not delete) the message
-LIBPROTOBUF_EXPORT void OnShutdownDestroyMessage(const void* ptr);
+PROTOBUF_API void OnShutdownDestroyMessage(const void* ptr);
 
 }  // namespace internal
 

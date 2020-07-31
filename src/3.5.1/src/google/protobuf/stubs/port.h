@@ -73,7 +73,7 @@
   #endif
 #endif
 #if defined(_MSC_VER) && defined(PROTOBUF_USE_DLLS)
-  #ifdef LIBPROTOBUF_EXPORTS
+  #ifdef PROTOBUF_APIS
     #define PROTOBUF_API __declspec(dllexport)
   #else
     #define PROTOBUF_API __declspec(dllimport)

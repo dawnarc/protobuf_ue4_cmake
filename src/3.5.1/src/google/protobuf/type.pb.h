@@ -36,7 +36,7 @@
 
 namespace protobuf_google_2fprotobuf_2ftype_2eproto {
 // Internal implementation detail -- do not use these members.
-struct LIBPROTOBUF_EXPORT TableStruct {
+struct PROTOBUF_API TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
   static const ::google::protobuf::internal::ParseTable schema[5];
@@ -44,18 +44,18 @@ struct LIBPROTOBUF_EXPORT TableStruct {
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
-void LIBPROTOBUF_EXPORT AddDescriptors();
-void LIBPROTOBUF_EXPORT InitDefaultsTypeImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsType();
-void LIBPROTOBUF_EXPORT InitDefaultsFieldImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsField();
-void LIBPROTOBUF_EXPORT InitDefaultsEnumImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsEnum();
-void LIBPROTOBUF_EXPORT InitDefaultsEnumValueImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsEnumValue();
-void LIBPROTOBUF_EXPORT InitDefaultsOptionImpl();
-void LIBPROTOBUF_EXPORT InitDefaultsOption();
-inline void LIBPROTOBUF_EXPORT InitDefaults() {
+void PROTOBUF_API AddDescriptors();
+void PROTOBUF_API InitDefaultsTypeImpl();
+void PROTOBUF_API InitDefaultsType();
+void PROTOBUF_API InitDefaultsFieldImpl();
+void PROTOBUF_API InitDefaultsField();
+void PROTOBUF_API InitDefaultsEnumImpl();
+void PROTOBUF_API InitDefaultsEnum();
+void PROTOBUF_API InitDefaultsEnumValueImpl();
+void PROTOBUF_API InitDefaultsEnumValue();
+void PROTOBUF_API InitDefaultsOptionImpl();
+void PROTOBUF_API InitDefaultsOption();
+inline void PROTOBUF_API InitDefaults() {
   InitDefaultsType();
   InitDefaultsField();
   InitDefaultsEnum();
@@ -67,19 +67,19 @@ namespace google {
 namespace protobuf {
 class Enum;
 class EnumDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern EnumDefaultTypeInternal _Enum_default_instance_;
+PROTOBUF_API extern EnumDefaultTypeInternal _Enum_default_instance_;
 class EnumValue;
 class EnumValueDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern EnumValueDefaultTypeInternal _EnumValue_default_instance_;
+PROTOBUF_API extern EnumValueDefaultTypeInternal _EnumValue_default_instance_;
 class Field;
 class FieldDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern FieldDefaultTypeInternal _Field_default_instance_;
+PROTOBUF_API extern FieldDefaultTypeInternal _Field_default_instance_;
 class Option;
 class OptionDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern OptionDefaultTypeInternal _Option_default_instance_;
+PROTOBUF_API extern OptionDefaultTypeInternal _Option_default_instance_;
 class Type;
 class TypeDefaultTypeInternal;
-LIBPROTOBUF_EXPORT extern TypeDefaultTypeInternal _Type_default_instance_;
+PROTOBUF_API extern TypeDefaultTypeInternal _Type_default_instance_;
 }  // namespace protobuf
 }  // namespace google
 namespace google {
@@ -108,12 +108,12 @@ enum Field_Kind {
   Field_Kind_Field_Kind_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   Field_Kind_Field_Kind_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-LIBPROTOBUF_EXPORT bool Field_Kind_IsValid(int value);
+PROTOBUF_API bool Field_Kind_IsValid(int value);
 const Field_Kind Field_Kind_Kind_MIN = Field_Kind_TYPE_UNKNOWN;
 const Field_Kind Field_Kind_Kind_MAX = Field_Kind_TYPE_SINT64;
 const int Field_Kind_Kind_ARRAYSIZE = Field_Kind_Kind_MAX + 1;
 
-LIBPROTOBUF_EXPORT const ::google::protobuf::EnumDescriptor* Field_Kind_descriptor();
+PROTOBUF_API const ::google::protobuf::EnumDescriptor* Field_Kind_descriptor();
 inline const ::std::string& Field_Kind_Name(Field_Kind value) {
   return ::google::protobuf::internal::NameOfEnum(
     Field_Kind_descriptor(), value);
@@ -131,12 +131,12 @@ enum Field_Cardinality {
   Field_Cardinality_Field_Cardinality_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   Field_Cardinality_Field_Cardinality_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-LIBPROTOBUF_EXPORT bool Field_Cardinality_IsValid(int value);
+PROTOBUF_API bool Field_Cardinality_IsValid(int value);
 const Field_Cardinality Field_Cardinality_Cardinality_MIN = Field_Cardinality_CARDINALITY_UNKNOWN;
 const Field_Cardinality Field_Cardinality_Cardinality_MAX = Field_Cardinality_CARDINALITY_REPEATED;
 const int Field_Cardinality_Cardinality_ARRAYSIZE = Field_Cardinality_Cardinality_MAX + 1;
 
-LIBPROTOBUF_EXPORT const ::google::protobuf::EnumDescriptor* Field_Cardinality_descriptor();
+PROTOBUF_API const ::google::protobuf::EnumDescriptor* Field_Cardinality_descriptor();
 inline const ::std::string& Field_Cardinality_Name(Field_Cardinality value) {
   return ::google::protobuf::internal::NameOfEnum(
     Field_Cardinality_descriptor(), value);
@@ -152,12 +152,12 @@ enum Syntax {
   Syntax_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   Syntax_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-LIBPROTOBUF_EXPORT bool Syntax_IsValid(int value);
+PROTOBUF_API bool Syntax_IsValid(int value);
 const Syntax Syntax_MIN = SYNTAX_PROTO2;
 const Syntax Syntax_MAX = SYNTAX_PROTO3;
 const int Syntax_ARRAYSIZE = Syntax_MAX + 1;
 
-LIBPROTOBUF_EXPORT const ::google::protobuf::EnumDescriptor* Syntax_descriptor();
+PROTOBUF_API const ::google::protobuf::EnumDescriptor* Syntax_descriptor();
 inline const ::std::string& Syntax_Name(Syntax value) {
   return ::google::protobuf::internal::NameOfEnum(
     Syntax_descriptor(), value);
@@ -169,7 +169,7 @@ inline bool Syntax_Parse(
 }
 // ===================================================================
 
-class LIBPROTOBUF_EXPORT Type : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Type) */ {
+class PROTOBUF_API Type : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Type) */ {
  public:
   Type();
   virtual ~Type();
@@ -372,7 +372,7 @@ class LIBPROTOBUF_EXPORT Type : public ::google::protobuf::Message /* @@protoc_i
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT Field : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Field) */ {
+class PROTOBUF_API Field : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Field) */ {
  public:
   Field();
   virtual ~Field();
@@ -713,7 +713,7 @@ class LIBPROTOBUF_EXPORT Field : public ::google::protobuf::Message /* @@protoc_
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT Enum : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Enum) */ {
+class PROTOBUF_API Enum : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Enum) */ {
  public:
   Enum();
   virtual ~Enum();
@@ -893,7 +893,7 @@ class LIBPROTOBUF_EXPORT Enum : public ::google::protobuf::Message /* @@protoc_i
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT EnumValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.EnumValue) */ {
+class PROTOBUF_API EnumValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.EnumValue) */ {
  public:
   EnumValue();
   virtual ~EnumValue();
@@ -1044,7 +1044,7 @@ class LIBPROTOBUF_EXPORT EnumValue : public ::google::protobuf::Message /* @@pro
 };
 // -------------------------------------------------------------------
 
-class LIBPROTOBUF_EXPORT Option : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Option) */ {
+class PROTOBUF_API Option : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:google.protobuf.Option) */ {
  public:
   Option();
   virtual ~Option();

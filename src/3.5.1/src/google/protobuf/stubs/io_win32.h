@@ -57,35 +57,35 @@ namespace protobuf {
 namespace internal {
 namespace win32 {
 
-LIBPROTOBUF_EXPORT FILE* fopen(const char* path, const char* mode);
-LIBPROTOBUF_EXPORT int access(const char* path, int mode);
-LIBPROTOBUF_EXPORT int chdir(const char* path);
-LIBPROTOBUF_EXPORT int close(int fd);
-LIBPROTOBUF_EXPORT int dup(int fd);
-LIBPROTOBUF_EXPORT int dup2(int fd1, int fd2);
-LIBPROTOBUF_EXPORT int mkdir(const char* path, int _mode);
-LIBPROTOBUF_EXPORT int open(const char* path, int flags, int mode = 0);
-LIBPROTOBUF_EXPORT int read(int fd, void* buffer, size_t size);
-LIBPROTOBUF_EXPORT int setmode(int fd, int mode);
-LIBPROTOBUF_EXPORT int stat(const char* path, struct _stat* buffer);
-LIBPROTOBUF_EXPORT int write(int fd, const void* buffer, size_t size);
-LIBPROTOBUF_EXPORT std::wstring testonly_utf8_to_winpath(const char* path);
+PROTOBUF_API FILE* fopen(const char* path, const char* mode);
+PROTOBUF_API int access(const char* path, int mode);
+PROTOBUF_API int chdir(const char* path);
+PROTOBUF_API int close(int fd);
+PROTOBUF_API int dup(int fd);
+PROTOBUF_API int dup2(int fd1, int fd2);
+PROTOBUF_API int mkdir(const char* path, int _mode);
+PROTOBUF_API int open(const char* path, int flags, int mode = 0);
+PROTOBUF_API int read(int fd, void* buffer, size_t size);
+PROTOBUF_API int setmode(int fd, int mode);
+PROTOBUF_API int stat(const char* path, struct _stat* buffer);
+PROTOBUF_API int write(int fd, const void* buffer, size_t size);
+PROTOBUF_API std::wstring testonly_utf8_to_winpath(const char* path);
 
 namespace strings {
 
 // Convert from UTF-16 to Active-Code-Page-encoded or to UTF-8-encoded text.
-LIBPROTOBUF_EXPORT bool wcs_to_mbs(
+PROTOBUF_API bool wcs_to_mbs(
     const wchar_t* s, std::string* out, bool outUtf8);
 
 // Convert from Active-Code-Page-encoded or UTF-8-encoded text to UTF-16.
-LIBPROTOBUF_EXPORT bool mbs_to_wcs(
+PROTOBUF_API bool mbs_to_wcs(
     const char* s, std::wstring* out, bool inUtf8);
 
 // Convert from UTF-8-encoded text to UTF-16.
-LIBPROTOBUF_EXPORT bool utf8_to_wcs(const char* input, std::wstring* out);
+PROTOBUF_API bool utf8_to_wcs(const char* input, std::wstring* out);
 
 // Convert from UTF-16-encoded text to UTF-8.
-LIBPROTOBUF_EXPORT bool wcs_to_utf8(const wchar_t* input, std::string* out);
+PROTOBUF_API bool wcs_to_utf8(const wchar_t* input, std::string* out);
 
 }  // namespace strings
 
