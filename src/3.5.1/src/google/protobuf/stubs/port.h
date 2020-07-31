@@ -74,9 +74,9 @@
 #endif
 #if defined(_MSC_VER) && defined(PROTOBUF_USE_DLLS)
   #ifdef LIBPROTOBUF_EXPORTS
-    #define LIBPROTOBUF_EXPORT __declspec(dllexport)
+    #define PROTOBUF_API __declspec(dllexport)
   #else
-    #define LIBPROTOBUF_EXPORT __declspec(dllimport)
+    #define PROTOBUF_API __declspec(dllimport)
   #endif
   #ifdef LIBPROTOC_EXPORTS
     #define LIBPROTOC_EXPORT   __declspec(dllexport)
@@ -84,7 +84,7 @@
     #define LIBPROTOC_EXPORT   __declspec(dllimport)
   #endif
 #else
-  #define LIBPROTOBUF_EXPORT
+  #define PROTOBUF_API
   #define LIBPROTOC_EXPORT
 #endif
 
@@ -455,7 +455,7 @@ class Bits {
 
 // ===================================================================
 // from google3/util/endian/endian.h
-LIBPROTOBUF_EXPORT uint32 ghtonl(uint32 x);
+PROTOBUF_API uint32 ghtonl(uint32 x);
 
 class BigEndian {
  public:

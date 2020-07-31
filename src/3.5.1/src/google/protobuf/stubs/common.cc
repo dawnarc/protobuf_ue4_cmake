@@ -46,10 +46,10 @@
 #define WIN32_LEAN_AND_MEAN  // We only need minimal includes
 #include <windows.h>
 #define snprintf _snprintf    // see comment in strutil.cc
-#elif defined(HAVE_PTHREAD)
+#else//#elif defined(HAVE_PTHREAD)
 #include <pthread.h>
-#else
-#error "No suitable threading library available."
+// #else
+// #error "No suitable threading library available."
 #endif
 #if defined(__ANDROID__)
 #include <android/log.h>
