@@ -38,9 +38,9 @@ Env:
 then `libprotobuf-lite.lib` would output to directory `install/Release/`.
 
 protobuf source has been modified. The build from original protobuf source with UE4 would fail if protobuf version is lower than `3.12`.  
-source modify details:  
-3.5: https://github.com/jashking/UE4Protobuf  
-3.9: https://github.com/kingsoftgames/protobuf-ue4/blob/master/Fix-3.9.2.bat  
+Source modification details:  
+version `3.5.x`: https://github.com/jashking/UE4Protobuf  
+version `3.9.x`: https://github.com/kingsoftgames/protobuf-ue4/blob/master/Fix-3.9.2.bat  
 
 ##### 2. generate protoc files
 
