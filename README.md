@@ -94,6 +94,8 @@ Execute `extract_includes.bat`, then protobuf headers would be saved in director
 
 then your can build your UE4 project with protoc C++ files.
 
+More details sea example: (MyProj.Build.cs)[https://github.com/dawnarc/protobuf_ue4_cmake/blob/master/ue4/MyProj.Build.cs].
+
 ##### Attention
 
 If want to build other version, modify parameter `PROTOBUF_VERSION` to specified version (e.g. `-DPROTOBUF_VERSION=3.5.1`), and also modify version in `extract_includes.bat`, and replace `protoc.exe` with matched version (`3.12.2` in current repository).
