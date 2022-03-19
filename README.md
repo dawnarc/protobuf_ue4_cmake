@@ -7,8 +7,6 @@ Env:
 + cmake version is 3.10
 + Unreal Engine 4 version is 4.18
 
-
-
 ### Windows
 
 ##### 1. build protobuf-lite library ( or run build-windows.bat)
@@ -17,23 +15,25 @@ Env:
 
 2. Address to directory `build_protobuf-lite/` (address to directory `build_protobuf/` if you want to build `libprotobuf`).
 
-		cd build_protobuf-lite
+        cd build_protobuf-lite
 		
 3. Create directory `build` and navigate in it.
 
-		mkdir build & cd build
+        mkdir build & cd build
 		
 4. Create directory `release` and navigate in it.
 
-		mkdir release & cd release
+        mkdir release & cd release
 	
 5. Generate configuration using `CMakeList.txt`.
 
-		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DPROTOBUF_VERSION=3.12.2 ../..
+        cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DPROTOBUF_VERSION=3.12.2 ../..
+        
+    If the version is lower then `3.12.x`, you need to append `-Dprotobuf_MSVC_STATIC_RUNTIME=OFF -Dprotobuf_BUILD_TESTS=OFF -Dprotobuf_BUILD_EXAMPLES=OFF`.
 		
 6. Build `libprotobuf`.
 
-		nmake
+        nmake
 
 then `libprotobuf-lite.lib` would output to directory `install/Release/`.
 
@@ -46,7 +46,7 @@ version `3.9.x`: https://github.com/kingsoftgames/protobuf-ue4/blob/master/Fix-3
 
 1. Address to directory `test/`:
 
-		cd test
+        cd test
 
 2. execute `protoc_gen.bat`.
 
@@ -56,23 +56,23 @@ then `test.pb.h` and `test.pb.cc` would be outputed in directory `test/`
 
 1. Address to directory `test/cmake/`:
 
-		cd test/cmake/
+        cd test/cmake/
     
 2. Create directory `build` and navigate in it.
 
-		mkdir build & cd build
+        mkdir build & cd build
 	
 3. Create directory `release` and navigate in it.
 
-		mkdir release & cd release
+        mkdir release & cd release
 	
 4. Generate configuration using `CMakeList.txt`.
 
-		cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DPROTOBUF_VERSION=3.12.2 ../..
+        cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DPROTOBUF_VERSION=3.12.2 ../..
     
 5. Build your own library.
 
-		nmake
+        nmake
 
 then `libtest.lib` would output to directory `test/install/Release/`
 
