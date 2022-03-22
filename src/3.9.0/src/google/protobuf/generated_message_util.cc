@@ -83,6 +83,12 @@ void InitProtobufDefaults() {
   (void)is_inited;
 }
 
+const std::string& GetEmptyString() {
+  InitProtobufDefaults();
+  return GetEmptyStringAlreadyInited();
+}
+
+
 size_t StringSpaceUsedExcludingSelfLong(const std::string& str) {
   const void* start = &str;
   const void* end = &str + 1;

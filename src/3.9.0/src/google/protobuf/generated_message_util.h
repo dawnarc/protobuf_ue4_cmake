@@ -84,10 +84,7 @@ inline To DownCast(From& f) {
 PROTOBUF_EXPORT void InitProtobufDefaults();
 
 // This used by proto1
-PROTOBUF_EXPORT inline const std::string& GetEmptyString() {
-  InitProtobufDefaults();
-  return GetEmptyStringAlreadyInited();
-}
+PROTOBUF_EXPORT const std::string& GetEmptyString();
 
 
 // True if IsInitialized() is true for all elements of t.  Type is expected
